@@ -1,5 +1,5 @@
 //
-//  VerticalListItem.swift
+//  MeasureListItem.swift
 //  CookConverter
 //
 //  Created by Lucas Antevere Santana on 27/11/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol VerticalListItemViewModelProtocol: ObservableObject {
+protocol MeasureListItemViewModelProtocol: ObservableObject, Identifiable {
     
     var imageName: String { get }
     
@@ -20,7 +20,7 @@ protocol VerticalListItemViewModelProtocol: ObservableObject {
     func setNumber(_ value: String)
 }
 
-struct VerticalListItem<ViewModel: VerticalListItemViewModelProtocol>: View {
+struct MeasureListItem<ViewModel: MeasureListItemViewModelProtocol>: View {
     
     @ObservedObject private var viewModel: ViewModel
     
@@ -75,9 +75,9 @@ struct VerticalListItem<ViewModel: VerticalListItemViewModelProtocol>: View {
     }
 }
 
-struct VerticalListItem_Previews: PreviewProvider {
+struct MeasureListItem_Previews: PreviewProvider {
     
-    final class MockViewModel: VerticalListItemViewModelProtocol {
+    final class MockViewModel: MeasureListItemViewModelProtocol {
         
         var isEditing: Bool = false
         
@@ -94,7 +94,7 @@ struct VerticalListItem_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        VerticalListItem(viewModel: MockViewModel())
+        MeasureListItem(viewModel: MockViewModel())
             .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/375.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
             .environment(\.colorScheme, .light)
     }

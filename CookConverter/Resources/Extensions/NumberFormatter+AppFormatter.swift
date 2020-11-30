@@ -49,9 +49,9 @@ class DoubleFormatter: Formatter {
     
     public let style: NumberFormatter.Style = .decimal
     
-    private init() {
+    init(locale: Locale = .current) {
         self.doubleFormatter.numberStyle = style
-        self.doubleFormatter.locale = .current
+        self.doubleFormatter.locale = locale
         self.doubleFormatter.maximumFractionDigits = 2
         self.doubleFormatter.minimumFractionDigits = 2
     }
