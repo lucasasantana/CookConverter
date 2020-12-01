@@ -14,6 +14,6 @@ class ConverterViewModel: ConverterViewModelProtocol {
     @Published var measures: MeasureListViewModel
     
     init() {
-        measures = MeasureListViewModel(measures: [(name: "Cup", imageName: "cup")])
+        measures = MeasureListViewModel()
     }
 }

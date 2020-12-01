@@ -16,12 +16,15 @@ struct TextFieldView: UIViewRepresentable {
     var didChange: () -> Void = { }
     var didEndEditing: () -> Void = { }
     
+    private var toolbar: Bool
+    
     private var font: UIFont?
     private var foregroundColor: UIColor?
     private var accentColor: UIColor?
     private var textAlignment: NSTextAlignment?
     private var contentType: UITextContentType?
     private var title: String?
+    private var inputView: UIView?
     
     private var autocorrection: UITextAutocorrectionType = .default
     private var autocapitalization: UITextAutocapitalizationType = .sentences
@@ -37,6 +40,7 @@ struct TextFieldView: UIViewRepresentable {
     init(_ title: String,
          text: Binding<String>,
          isEditing: Binding<Bool>,
+         withToolbar: Bool = false,
          didBeginEditing: @escaping () -> Void = { },
          didChange: @escaping () -> Void = { },
          didEndEditing: @escaping () -> Void = { }
@@ -47,11 +51,14 @@ struct TextFieldView: UIViewRepresentable {
         self.didBeginEditing = didBeginEditing
         self.didChange = didChange
         self.didEndEditing = didEndEditing
+        self.toolbar = withToolbar
     }
     
     func makeUIView(context: Context) -> UITextField {
         
         let textField = PaddingTextField(inset: 8, axis: [.vertical])
+        
+        context.coordinator.textField = textField
         
         textField.delegate = context.coordinator
         
@@ -93,6 +100,21 @@ struct TextFieldView: UIViewRepresentable {
         
         textField.accessibilityLabel = title
         
+        textField.inputView = inputView
+        
+        if toolbar {
+            
+            let toolbar = UIToolbar()
+            
+            let okItem = UIBarButtonItem(barButtonSystemItem: .done, target: context.coordinator, action: #selector(Coordinator.dismissTextField))
+            
+            toolbar.setItems([UIBarButtonItem(systemItem: .flexibleSpace), okItem], animated: false)
+            
+            textField.inputAccessoryView = toolbar
+            
+            toolbar.sizeToFit()
+        }
+        
         return textField
     }
     
@@ -125,6 +147,8 @@ struct TextFieldView: UIViewRepresentable {
         var didChange: () -> Void
         var didEndEditing: () -> Void
         
+        weak var textField: UITextField?
+        
         init(
             text: Binding<String>,
             isEditing: Binding<Bool>,
@@ -156,6 +180,10 @@ struct TextFieldView: UIViewRepresentable {
             text = textField.text ?? ""
             
             didChange()
+        }
+        
+        @objc func dismissTextField(_ button: UIBarButtonItem) {
+            textField?.resignFirstResponder()
         }
         
         func textFieldDidEndEditing(_ textField: UITextField) {
@@ -337,6 +365,21 @@ extension TextFieldView {
     func disabled(_ disabled: Bool) -> TextFieldView {
         var view = self
         view.isUserInteractionEnabled = disabled
+        return view
+    }
+    
+    func proportionalInputView(viewModel: ProportionalMeasuresPickerViewModelProtocol?) -> TextFieldView {
+        
+        guard let viewModel = viewModel else {
+            return self
+        }
+        
+        var view = self
+        
+        let picker = ProportionalMeasuresPickerView(viewModel: viewModel)
+        
+        view.inputView = picker
+        
         return view
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 protocol MeasureListItemViewModelProtocol: ObservableObject, Identifiable {
     
+    var proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol? { get }
+    
     var imageName: String { get }
     
     var title: String { get }
@@ -44,25 +46,33 @@ struct MeasureListItem<ViewModel: MeasureListItemViewModelProtocol>: View {
     
     var body: some View {
         
-        HStack(spacing: 16) {
+        HStack {
             
             IconView(viewModel.imageName)
             
+            Spacer()
+                .frame(width: 16)
+            
             Text(viewModel.title)
                 .appFont(weight: .bold, textStyle: .body)
+                .multilineTextAlignment(.leading)
                 .foregroundColor(.white)
+                .lineLimit(2)
             
-            Spacer(minLength: 20)
+            Spacer()
             
             VStack {
             
                 Spacer()
                 
-                NumberTextField(input: bindingText, isEditing: bindingIsEditing)
-                    
+                NumberTextField(
+                    input: bindingText,
+                    isEditing: bindingIsEditing,
+                    proportionalInputViewModel: viewModel.proportionalInputViewModel
+                )
+                    .frame(width: 94)
                     .frame(
-                        maxWidth: 120,
-                        maxHeight: 31,
+                        maxHeight: 55,
                         alignment: .center
                     )
                     .padding(.all, 16)
@@ -79,6 +89,8 @@ struct MeasureListItem_Previews: PreviewProvider {
     
     final class MockViewModel: MeasureListItemViewModelProtocol {
         
+        var proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol?
+        
         var isEditing: Bool = false
         
         var number: String = "0.0"
@@ -90,6 +102,8 @@ struct MeasureListItem_Previews: PreviewProvider {
         func setNumber(_ value: String) {
             self.number = value
         }
+        
+        func selectProportionalInput(integer: Int, decimal: Int) {}
     }
     
     static var previews: some View {

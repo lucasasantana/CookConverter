@@ -20,9 +20,16 @@ struct NumberTextField: View {
     @Binding var input: String
     @Binding var isEditing: Bool
     
-    init(input: Binding<String>, isEditing: Binding<Bool>) {
+     var proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol?
+    
+    init(input: Binding<String>,
+         isEditing: Binding<Bool>,
+         proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol?
+    ) {
+        
         self._input = input
         self._isEditing = isEditing
+        self.proportionalInputViewModel = proportionalInputViewModel
     }
     
     var body: some View {
@@ -31,12 +38,7 @@ struct NumberTextField: View {
             
             Color(Asset.Colors.iconBackground)
             
-            TextFieldView("Number Input", text: $input, isEditing: $isEditing)
-                .keyboardType(.decimalPad)
-                .multilineTextAlignment(.center)
-                .appFont(weight: .bold, textStyle: .body)
-                .foregroundColor(Asset.Colors.numberFieldLabel)
-                .accentColor(.clear)
+            makeTextField()
         }
         .clipShape(RoundedRectangle(cornerRadius: 6.0))
         .innerShadow(.roundedRect(cornerRadius: 6.0),
@@ -44,6 +46,23 @@ struct NumberTextField: View {
                      shadowColor: Color.black.opacity(0.5),
                      borderWidth: 1.0,
                      offset: CGPoint(x: 0, y: 2))
+    }
+    
+    func makeTextField() -> TextFieldView {
+        
+        var view = TextFieldView("Number Input", text: $input, isEditing: $isEditing, withToolbar: true)
+            .keyboardType(.decimalPad)
+            .multilineTextAlignment(.center)
+            .appFont(weight: .bold, textStyle: .body)
+            .foregroundColor(Asset.Colors.numberFieldLabel)
+            .accentColor(.clear)
+        
+        if let inputViewModel = proportionalInputViewModel {
+            view = view
+                .proportionalInputView(viewModel: inputViewModel)
+        }
+        
+        return view
     }
 }
 
@@ -53,7 +72,11 @@ struct NumberTextField_Previews: PreviewProvider {
     @State static var isEditing = false
     
     static var previews: some View {
-        NumberTextField(input: $input, isEditing: $isEditing)
+        NumberTextField(
+            input: $input,
+            isEditing: $isEditing,
+            proportionalInputViewModel: nil
+        )
             .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/, height: 31))
     }
 }

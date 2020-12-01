@@ -11,6 +11,8 @@ protocol MeasureListViewModelProtocol: ObservableObject {
     
     associatedtype MeasureViewModel: MeasureListItemViewModelProtocol
     
+    var title: String { get }
+    
     var measures: [MeasureViewModel] { get }
 }
 
@@ -20,7 +22,11 @@ struct MeasureListView<ViewModel: MeasureListViewModelProtocol>: View {
     
     var body: some View {
         
-        VStack(spacing: 16) {
+        VStack(alignment: .leading, spacing: 16) {
+            
+            Text(viewModel.title)
+                .multilineTextAlignment(.leading)
+                .appFont(weight: .semibold, textStyle: .largeTitle)
             
             ForEach(viewModel.measures) { measure in
                 
@@ -32,7 +38,7 @@ struct MeasureListView<ViewModel: MeasureListViewModelProtocol>: View {
                     
                 }
                 .frame(
-                    maxHeight: 84
+                    idealHeight: 100
                 )
                 .clipShape(
                     RoundedRectangle(cornerRadius: 12)
@@ -48,14 +54,7 @@ struct MeasureListView<ViewModel: MeasureListViewModelProtocol>: View {
 
 struct MeasureListView_Previews: PreviewProvider {
     
-    private class MockViewModel: MeasureListViewModelProtocol {
-        
-         typealias MeasureViewModel = MeasureListItemViewModel
-        
-        var measures: [MeasureListItemViewModel] = [.init(title: "Cup", imageName: "cup")]
-    }
-    
     static var previews: some View {
-        MeasureListView(viewModel: MockViewModel())
+        MeasureListView(viewModel: MeasureListViewModel())
     }
 }

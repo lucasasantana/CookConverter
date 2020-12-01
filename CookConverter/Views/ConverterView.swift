@@ -23,14 +23,21 @@ struct ConverterView<ViewModel: ConverterViewModelProtocol>: View {
     }
     
     var body: some View {
-        
-        ScrollView {
-            MeasureListView(viewModel: viewModel.measures)
             
-        }
-        .padding(.horizontal, 20)
-        .onTapGesture {
-            UIApplication.shared.endEditing()
+        ZStack {
+            
+            Color(Asset.Colors.defaultBackground)
+                .edgesIgnoringSafeArea(.all)
+            
+            ScrollView(showsIndicators: false) {
+                MeasureListView(viewModel: viewModel.measures)
+                    .padding(.horizontal, 20)
+            }
+            .navigationTitle("Conversor Culinário")
+            .navigationBarTitleDisplayMode(.inline)
+            .onTapGesture {
+                UIApplication.shared.endEditing()
+            }
         }
     }
 }

@@ -13,6 +13,18 @@
 		2A17F6392574373100FF4826 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17F6382574373100FF4826 /* TextFieldView.swift */; };
 		2A17F63A2574373100FF4826 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17F6382574373100FF4826 /* TextFieldView.swift */; };
 		2A17F63B2574373100FF4826 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17F6382574373100FF4826 /* TextFieldView.swift */; };
+		2A2B84C725752852002627E5 /* DefaultMeasures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84C625752852002627E5 /* DefaultMeasures.swift */; };
+		2A2B84C825752852002627E5 /* DefaultMeasures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84C625752852002627E5 /* DefaultMeasures.swift */; };
+		2A2B84C925752852002627E5 /* DefaultMeasures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84C625752852002627E5 /* DefaultMeasures.swift */; };
+		2A2B84D225752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84D125752DF6002627E5 /* ConverterBusinessLogic.swift */; };
+		2A2B84D325752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84D125752DF6002627E5 /* ConverterBusinessLogic.swift */; };
+		2A2B84D425752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84D125752DF6002627E5 /* ConverterBusinessLogic.swift */; };
+		2A2B84DF25752EB7002627E5 /* AppUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84DE25752EB7002627E5 /* AppUnit.swift */; };
+		2A2B84E025752EB7002627E5 /* AppUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84DE25752EB7002627E5 /* AppUnit.swift */; };
+		2A2B84E125752EB7002627E5 /* AppUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84DE25752EB7002627E5 /* AppUnit.swift */; };
+		2A2B84E625753BFF002627E5 /* MeasurementFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84E525753BFF002627E5 /* MeasurementFormatter.swift */; };
+		2A2B84E725753BFF002627E5 /* MeasurementFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84E525753BFF002627E5 /* MeasurementFormatter.swift */; };
+		2A2B84E825753BFF002627E5 /* MeasurementFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B84E525753BFF002627E5 /* MeasurementFormatter.swift */; };
 		2A5C27C02570302300335992 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C27BF2570302300335992 /* SceneDelegate.swift */; };
 		2A5C27C22570302300335992 /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C27C12570302300335992 /* ConverterView.swift */; };
 		2A5C27C42570302D00335992 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5C27C32570302D00335992 /* Assets.xcassets */; };
@@ -32,9 +44,9 @@
 		2A64AC0B2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC0A2571D66E0036C0C8 /* String+NumberFormat.swift */; };
 		2A64AC0C2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC0A2571D66E0036C0C8 /* String+NumberFormat.swift */; };
 		2A64AC0D2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC0A2571D66E0036C0C8 /* String+NumberFormat.swift */; };
-		2A64AC122571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC112571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift */; };
-		2A64AC132571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC112571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift */; };
-		2A64AC142571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC112571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift */; };
+		2A64AC122571D6BA0036C0C8 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC112571D6BA0036C0C8 /* NumberFormatter.swift */; };
+		2A64AC132571D6BA0036C0C8 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC112571D6BA0036C0C8 /* NumberFormatter.swift */; };
+		2A64AC142571D6BA0036C0C8 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64AC112571D6BA0036C0C8 /* NumberFormatter.swift */; };
 		2A6529AD25716880006048F4 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529AC25716880006048F4 /* IconView.swift */; };
 		2A6529AE25716880006048F4 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529AC25716880006048F4 /* IconView.swift */; };
 		2A6529AF25716880006048F4 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529AC25716880006048F4 /* IconView.swift */; };
@@ -123,6 +135,12 @@
 		2A9E20C32573F52200C8ACF3 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */; };
 		2A9E20C42573F52200C8ACF3 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */; };
 		2A9E20C52573F52200C8ACF3 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */; };
+		2ABE59C72575732A00700FF2 /* InputPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59C62575732A00700FF2 /* InputPickerView.swift */; };
+		2ABE59C82575732A00700FF2 /* InputPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59C62575732A00700FF2 /* InputPickerView.swift */; };
+		2ABE59C92575732A00700FF2 /* InputPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59C62575732A00700FF2 /* InputPickerView.swift */; };
+		2ABE59D1257586E000700FF2 /* Double+Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59D0257586E000700FF2 /* Double+Fraction.swift */; };
+		2ABE59D2257586E000700FF2 /* Double+Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59D0257586E000700FF2 /* Double+Fraction.swift */; };
+		2ABE59D3257586E000700FF2 /* Double+Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59D0257586E000700FF2 /* Double+Fraction.swift */; };
 		2AEF6A1B2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF6A1A2574145700A2B6A1 /* UIApplication+EndEditting.swift */; };
 		2AEF6A1C2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF6A1A2574145700A2B6A1 /* UIApplication+EndEditting.swift */; };
 		2AEF6A1D2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF6A1A2574145700A2B6A1 /* UIApplication+EndEditting.swift */; };
@@ -148,6 +166,10 @@
 /* Begin PBXFileReference section */
 		2A02D1972571978400E20249 /* InnerShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerShadow.swift; sourceTree = "<group>"; };
 		2A17F6382574373100FF4826 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		2A2B84C625752852002627E5 /* DefaultMeasures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMeasures.swift; sourceTree = "<group>"; };
+		2A2B84D125752DF6002627E5 /* ConverterBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterBusinessLogic.swift; sourceTree = "<group>"; };
+		2A2B84DE25752EB7002627E5 /* AppUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUnit.swift; sourceTree = "<group>"; };
+		2A2B84E525753BFF002627E5 /* MeasurementFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatter.swift; sourceTree = "<group>"; };
 		2A5C27BA2570302200335992 /* CookConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5C27BD2570302200335992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5C27BF2570302300335992 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,7 +187,7 @@
 		2A64ABF42571D3480036C0C8 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		2A64ABFE2571D37B0036C0C8 /* Color+Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Asset.swift"; sourceTree = "<group>"; };
 		2A64AC0A2571D66E0036C0C8 /* String+NumberFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NumberFormat.swift"; sourceTree = "<group>"; };
-		2A64AC112571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+AppFormatter.swift"; sourceTree = "<group>"; };
+		2A64AC112571D6BA0036C0C8 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		2A6529AC25716880006048F4 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		2A6529BD2571705D006048F4 /* MeasureListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureListItem.swift; sourceTree = "<group>"; };
 		2A6692362574589C00D51764 /* String+Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Fraction.swift"; sourceTree = "<group>"; };
@@ -196,6 +218,8 @@
 		2A8C554925743E2300E4245B /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		2A8C555A2574527D00E4245B /* MeasureListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureListItemViewModel.swift; sourceTree = "<group>"; };
 		2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
+		2ABE59C62575732A00700FF2 /* InputPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPickerView.swift; sourceTree = "<group>"; };
+		2ABE59D0257586E000700FF2 /* Double+Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Fraction.swift"; sourceTree = "<group>"; };
 		2AEF6A1A2574145700A2B6A1 /* UIApplication+EndEditting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+EndEditting.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +276,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		2A2B84D025752DE0002627E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2A2B84D125752DF6002627E5 /* ConverterBusinessLogic.swift */,
+				2A6692B42574953600D51764 /* ConverterServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2A5C27B12570302200335992 = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5C27F02570305C00335992 /* Application */,
+				2A2B84D025752DE0002627E5 /* Services */,
 				2A5C27FC257030C600335992 /* Views */,
 				2A6692B32574951000D51764 /* Model */,
 				2A5C27F72570309B00335992 /* Resources */,
@@ -356,8 +390,10 @@
 			children = (
 				2A66923D2574589F00D51764 /* String */,
 				2A64ABFE2571D37B0036C0C8 /* Color+Asset.swift */,
-				2A64AC112571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift */,
+				2A64AC112571D6BA0036C0C8 /* NumberFormatter.swift */,
+				2A2B84E525753BFF002627E5 /* MeasurementFormatter.swift */,
 				2AEF6A1A2574145700A2B6A1 /* UIApplication+EndEditting.swift */,
+				2ABE59D0257586E000700FF2 /* Double+Fraction.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -401,6 +437,7 @@
 			children = (
 				2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */,
 				2A17F6382574373100FF4826 /* TextFieldView.swift */,
+				2ABE59C62575732A00700FF2 /* InputPickerView.swift */,
 				2A66925725746B8600D51764 /* PaddingTextField.swift */,
 			);
 			path = TextField;
@@ -419,7 +456,8 @@
 		2A6692B32574951000D51764 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2A6692B42574953600D51764 /* ConverterServices.swift */,
+				2A2B84C625752852002627E5 /* DefaultMeasures.swift */,
+				2A2B84DE25752EB7002627E5 /* AppUnit.swift */,
 				2A6692C12574960500D51764 /* Product.swift */,
 			);
 			path = Model;
@@ -538,10 +576,10 @@
 			};
 			buildConfigurationList = 2A5C27B52570302200335992 /* Build configuration list for PBXProject "CookConverter" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = "pt-br";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				"pt-br",
 				Base,
 			);
 			mainGroup = 2A5C27B12570302200335992;
@@ -661,24 +699,30 @@
 				2A9E20C32573F52200C8ACF3 /* NumberTextField.swift in Sources */,
 				2A8C554A25743E2300E4245B /* AppFont.swift in Sources */,
 				2A6692B52574953600D51764 /* ConverterServices.swift in Sources */,
-				2A64AC122571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift in Sources */,
+				2A2B84D225752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */,
+				2A64AC122571D6BA0036C0C8 /* NumberFormatter.swift in Sources */,
 				2A17F6392574373100FF4826 /* TextFieldView.swift in Sources */,
 				2A5C2800257030F400335992 /* AppDelegate.swift in Sources */,
 				2A64ABF52571D3480036C0C8 /* XCAssets+Generated.swift in Sources */,
 				2A6529BE2571705D006048F4 /* MeasureListItem.swift in Sources */,
 				2A8C555B2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */,
 				2A6529AD25716880006048F4 /* IconView.swift in Sources */,
+				2ABE59D1257586E000700FF2 /* Double+Fraction.swift in Sources */,
+				2ABE59C72575732A00700FF2 /* InputPickerView.swift in Sources */,
 				2A6692C22574960500D51764 /* Product.swift in Sources */,
 				2A5C27C02570302300335992 /* SceneDelegate.swift in Sources */,
 				2A5C27C22570302300335992 /* ConverterView.swift in Sources */,
+				2A2B84E625753BFF002627E5 /* MeasurementFormatter.swift in Sources */,
 				2A6692A72574920300D51764 /* MeasureListViewModel.swift in Sources */,
 				2A6692A0257490C700D51764 /* MeasureListView.swift in Sources */,
 				2A66925825746B8600D51764 /* PaddingTextField.swift in Sources */,
+				2A2B84C725752852002627E5 /* DefaultMeasures.swift in Sources */,
 				2A6692372574589C00D51764 /* String+Fraction.swift in Sources */,
 				2A64AC0B2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */,
 				2A64ABFF2571D37B0036C0C8 /* Color+Asset.swift in Sources */,
 				2AEF6A1B2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */,
 				2A66928325746DCA00D51764 /* ConverterViewModel.swift in Sources */,
+				2A2B84DF25752EB7002627E5 /* AppUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +735,7 @@
 				2A8C554125743DED00E4245B /* Fonts.swift in Sources */,
 				2A17F63A2574373100FF4826 /* TextFieldView.swift in Sources */,
 				2A6692B62574953600D51764 /* ConverterServices.swift in Sources */,
+				2A2B84D325752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */,
 				2AEF6A1C2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */,
 				2A9E20C42573F52200C8ACF3 /* NumberTextField.swift in Sources */,
 				2A02D1992571978400E20249 /* InnerShadow.swift in Sources */,
@@ -698,17 +743,22 @@
 				2A6529BF2571705D006048F4 /* MeasureListItem.swift in Sources */,
 				2A6692382574589C00D51764 /* String+Fraction.swift in Sources */,
 				2A8C555C2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */,
+				2ABE59D2257586E000700FF2 /* Double+Fraction.swift in Sources */,
+				2ABE59C82575732A00700FF2 /* InputPickerView.swift in Sources */,
 				2A6692C32574960500D51764 /* Product.swift in Sources */,
 				2A5C27D52570302D00335992 /* CookConverterTests.swift in Sources */,
 				2A64ABF62571D3480036C0C8 /* XCAssets+Generated.swift in Sources */,
+				2A2B84E725753BFF002627E5 /* MeasurementFormatter.swift in Sources */,
 				2A6692A82574920300D51764 /* MeasureListViewModel.swift in Sources */,
 				2A6692A1257490C700D51764 /* MeasureListView.swift in Sources */,
 				2A66925925746B8600D51764 /* PaddingTextField.swift in Sources */,
+				2A2B84C825752852002627E5 /* DefaultMeasures.swift in Sources */,
 				2A64AC0C2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */,
 				2A64AC002571D37B0036C0C8 /* Color+Asset.swift in Sources */,
-				2A64AC132571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift in Sources */,
+				2A64AC132571D6BA0036C0C8 /* NumberFormatter.swift in Sources */,
 				2A8C554B25743E2300E4245B /* AppFont.swift in Sources */,
 				2A66928425746DCA00D51764 /* ConverterViewModel.swift in Sources */,
+				2A2B84E025752EB7002627E5 /* AppUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,9 +772,12 @@
 				2A5C2808257030F900335992 /* AppDelegate.swift in Sources */,
 				2A6529AF25716880006048F4 /* IconView.swift in Sources */,
 				2A6692C42574960500D51764 /* Product.swift in Sources */,
+				2A2B84C925752852002627E5 /* DefaultMeasures.swift in Sources */,
 				2A8C554225743DED00E4245B /* Fonts.swift in Sources */,
 				2A17F63B2574373100FF4826 /* TextFieldView.swift in Sources */,
+				2A2B84D425752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */,
 				2AEF6A1D2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */,
+				2A2B84E825753BFF002627E5 /* MeasurementFormatter.swift in Sources */,
 				2A9E20C52573F52200C8ACF3 /* NumberTextField.swift in Sources */,
 				2A02D19A2571978400E20249 /* InnerShadow.swift in Sources */,
 				2A6529C02571705D006048F4 /* MeasureListItem.swift in Sources */,
@@ -732,11 +785,14 @@
 				2A6692392574589C00D51764 /* String+Fraction.swift in Sources */,
 				2A8C555D2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */,
 				2A6692B72574953600D51764 /* ConverterServices.swift in Sources */,
+				2A2B84E125752EB7002627E5 /* AppUnit.swift in Sources */,
+				2ABE59D3257586E000700FF2 /* Double+Fraction.swift in Sources */,
 				2A5C27E02570302D00335992 /* CookConverterUITests.swift in Sources */,
 				2A64ABF72571D3480036C0C8 /* XCAssets+Generated.swift in Sources */,
 				2A64AC0D2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */,
+				2ABE59C92575732A00700FF2 /* InputPickerView.swift in Sources */,
 				2A64AC012571D37B0036C0C8 /* Color+Asset.swift in Sources */,
-				2A64AC142571D6BA0036C0C8 /* NumberFormatter+AppFormatter.swift in Sources */,
+				2A64AC142571D6BA0036C0C8 /* NumberFormatter.swift in Sources */,
 				2A8C554C25743E2300E4245B /* AppFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
