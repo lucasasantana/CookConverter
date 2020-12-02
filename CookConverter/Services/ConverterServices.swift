@@ -26,9 +26,9 @@ class ConverterServices: ConverterBusinessLogic, MeasurementItemBusinessLogic {
         case volume
     }
     
-    private var lastSelectedUnitType: UnitType
+    private(set) var lastSelectedUnitType: UnitType
     
-    var density: Double
+    private(set) var density: Double
     
     init(product: Product) {
         
@@ -51,7 +51,7 @@ class ConverterServices: ConverterBusinessLogic, MeasurementItemBusinessLogic {
         
         defaultMeasurements.updateVolume(value: receivedVolumeMeasure.value)
         
-        let massValue: Double = measure * density
+        let massValue: Double = defaultMeasurements.volume.value * density
         
         defaultMeasurements.updateMass(value: massValue)
         
@@ -74,7 +74,7 @@ class ConverterServices: ConverterBusinessLogic, MeasurementItemBusinessLogic {
             volumeValue = .zero
             
         } else {
-            volumeValue = measure / density
+            volumeValue = defaultMeasurements.mass.value / density
         }
         
         defaultMeasurements.updateVolume(value: volumeValue)

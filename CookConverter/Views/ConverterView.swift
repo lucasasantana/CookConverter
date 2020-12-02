@@ -11,7 +11,7 @@ protocol ConverterViewModelProtocol: ObservableObject {
     
     associatedtype MeasureModel: MeasureListViewModelProtocol
     
-    var measures: MeasureModel { get set}
+    var measures: MeasureModel { get set }
 }
 
 struct ConverterView<ViewModel: ConverterViewModelProtocol>: View {
@@ -33,8 +33,6 @@ struct ConverterView<ViewModel: ConverterViewModelProtocol>: View {
                 MeasureListView(viewModel: viewModel.measures)
                     .padding(.horizontal, 20)
             }
-            .navigationTitle("Conversor Culinário")
-            .navigationBarTitleDisplayMode(.inline)
             .onTapGesture {
                 UIApplication.shared.endEditing()
             }

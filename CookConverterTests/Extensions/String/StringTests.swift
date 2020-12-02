@@ -8,41 +8,6 @@
 import XCTest
 
 class StringTests: XCTestCase {
-
-    func testOneElementFraction() {
-        
-        let sut = "1/2"
-        
-        XCTAssertEqual(sut.fractionValue, 0.5)
-    }
-    
-    func testTwoElements() {
-        
-        let sut = "1 1/2"
-        
-        XCTAssertEqual(sut.fractionValue, 1.5)
-    }
-    
-    func testDivisionByZero() {
-        
-        let sut = "1/0"
-        
-        XCTAssertEqual(sut.fractionValue, .zero)
-    }
-    
-    func testZeroSum() {
-        
-        let sut = "0 1/2"
-        
-        XCTAssertEqual(sut.fractionValue, 0.5)
-    }
-    
-    func testInvalidString() {
-        
-        let sut = "asasasasa"
-        
-        XCTAssertEqual(sut.fractionValue, 0.0)
-    }
     
     func testDoubleInput() {
         

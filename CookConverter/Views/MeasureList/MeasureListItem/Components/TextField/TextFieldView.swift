@@ -368,7 +368,7 @@ extension TextFieldView {
         return view
     }
     
-    func proportionalInputView(viewModel: ProportionalMeasuresPickerViewModelProtocol?) -> TextFieldView {
+    func proportionalInputView(viewModel: InputPickerViewModelProtocol?) -> TextFieldView {
         
         guard let viewModel = viewModel else {
             return self
@@ -376,7 +376,7 @@ extension TextFieldView {
         
         var view = self
         
-        let picker = ProportionalMeasuresPickerView(viewModel: viewModel)
+        let picker = InputPickerView(viewModel: viewModel)
         
         view.inputView = picker
         

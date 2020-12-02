@@ -17,7 +17,7 @@ protocol MeasurementItemBusinessLogic {
 }
 
 class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
-   
+    
     @Published var isEditing: Bool
     
     @Published var imageName: String
@@ -26,17 +26,9 @@ class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
     
     @Published var number: String
     
-    var indexes: [Int] {
-        didSet {
-            indexesSubject.send(indexes)
-        }
-    }
-    
-    var indexesSubject: CurrentValueSubject<[Int], Never>
-    
     var subscribers: Set<AnyCancellable>
     
-    var proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol?
+    var proportionalInputViewModel: (InputPickerViewModelProtocol)?
     
     var measureFormatter: AppMeasureFormatter
     
@@ -77,10 +69,6 @@ class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
         self.number = ""
         self.imageName = dimension.iconName
         
-        self.indexes = []
-        
-        self.indexesSubject = CurrentValueSubject([])
-        
         self.cofigureInput()
         self.configureSubscriber()
     }
@@ -92,11 +80,10 @@ class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
     func cofigureInput() {
         
         if dimension.valueType == .proportional {
-            self.indexes = columns.map { _ in return 0 }
-            self.proportionalInputViewModel = self
+            self.proportionalInputViewModel = ProportionalMeasuresPickerViewModel()
         }
         
-        self.setNumber(.zero)
+        self.updateNumber(.zero)
     }
     
     func configureSubscriber() {
@@ -118,9 +105,22 @@ class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
                         value = measures.volume.converted(to: unit).value
                 }
                 
-                self.setNumber(value)
+                self.updateNumber(value)
             }
             .store(in: &subscribers)
+        
+        if let proportionalInputViewModel = proportionalInputViewModel {
+            
+            proportionalInputViewModel.numberPublisher()
+                
+                .sink { [weak self] (value) in
+                    
+                    guard let self = self else { return }
+                    
+                    self.setNumber(value)
+                }
+                .store(in: &subscribers)
+        }
     }
     
     func setNumber(_ value: String) {
@@ -132,88 +132,32 @@ class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
             return
         }
         
+        self.setNumber(doubleValue)
+    }
+    
+    func setNumber(_ value: Double) {
+        
         switch self.dimension.unit {
             
             case .mass(let unit):
-                businessLogic.convert(measure: doubleValue, withUnit: unit)
+                businessLogic.convert(measure: value, withUnit: unit)
                 
             case .volume(let unit):
-                businessLogic.convert(measure: doubleValue, withUnit: unit)
+                businessLogic.convert(measure: value, withUnit: unit)
         }
     }
     
-    private func setNumber(_ value: Double) {
+    private func updateNumber(_ value: Double) {
+        
+        var string: String?
         
         if self.dimension.valueType == .proportional {
-            
-            let components = value.fractionStringComponents
-            
-            if let integerPart = components.integer, let index = columns[0].firstIndex(of: integerPart) {
-                indexes[0] = index
-            } else {
-                indexes[0] = .zero
-            }
-            
-            if let decimalPart = components.decimal, let index = columns[1].firstIndex(of: decimalPart) {
-                indexes[1] = index
-                
-            } else {
-                indexes[1] = .zero
-            }
-            
-            let integer = columns[0][indexes[0]]
-            let decimal = columns[1][indexes[1]]
-            
-            if integer != "0" && decimal != "0" {
-                self.number = "\(integer) \(decimal)"
-                
-            } else if integer != "0" {
-                self.number = integer
-                
-            } else {
-                self.number = decimal
-            }
+            string = proportionalInputViewModel?.set(number: value)
             
         } else {
-            self.number = measureFormatter.localizedString(from: value) ?? measureFormatter.localizedZero
-        }
-    }
-}
-
-extension MeasureListItemViewModel: ProportionalMeasuresPickerViewModelProtocol {
-    
-    var columns: [[String]] {
-        [(0...50).map {String($0)}, ["0", "1/4", "1/3", "1/2", "2/3", "3/4"]]
-    }
-    
-    func indexesPublisher() -> AnyPublisher<[Int], Never> {
-        return indexesSubject.eraseToAnyPublisher()
-    }
-    
-    func set(index: Int, atColumn column: Int) {
-        
-        let columns = self.columns
-        
-        guard
-            
-            indexes.count == 2,
-            column < indexes.count
-        
-        else {
-            return
+            string = measureFormatter.localizedString(from: value)
         }
         
-        self.indexes[column] = index
-        
-        let newValueString = "\(columns[0][indexes[0]]) \(columns[1][indexes[1]])"
-        
-        switch self.dimension.unit {
-            
-            case .mass(let unit):
-                businessLogic.convert(measure: newValueString.fractionValue, withUnit: unit)
-                
-            case .volume(let unit):
-                businessLogic.convert(measure: newValueString.fractionValue, withUnit: unit)
-        }
+        self.number = string ?? measureFormatter.localizedZero
     }
 }

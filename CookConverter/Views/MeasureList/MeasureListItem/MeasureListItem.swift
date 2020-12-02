@@ -9,7 +9,7 @@ import SwiftUI
 
 protocol MeasureListItemViewModelProtocol: ObservableObject, Identifiable {
     
-    var proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol? { get }
+    var proportionalInputViewModel: InputPickerViewModelProtocol? { get }
     
     var imageName: String { get }
     
@@ -89,7 +89,7 @@ struct MeasureListItem_Previews: PreviewProvider {
     
     final class MockViewModel: MeasureListItemViewModelProtocol {
         
-        var proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol?
+        var proportionalInputViewModel: InputPickerViewModelProtocol?
         
         var isEditing: Bool = false
         

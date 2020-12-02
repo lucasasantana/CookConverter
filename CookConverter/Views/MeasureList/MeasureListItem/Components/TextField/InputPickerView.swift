@@ -8,22 +8,30 @@
 import SwiftUI
 import Combine
 
-protocol ProportionalMeasuresPickerViewModelProtocol {
+protocol InputPickerViewModelProtocol {
     
     var columns: [[String]] { get }
     
+    var currentNumberString: String? { get }
+    
+    var currentNumber: Double? { get }
+    
     func indexesPublisher() -> AnyPublisher<[Int], Never>
     
+    func numberPublisher() -> AnyPublisher<Double, Never>
+    
     func set(index: Int, atColumn column: Int)
+    
+    func set(number: Double) -> String
 }
 
-class ProportionalMeasuresPickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate {
+class InputPickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    private var viewModel: ProportionalMeasuresPickerViewModelProtocol
+    private var viewModel: InputPickerViewModelProtocol
     
     private var subscribers: Set<AnyCancellable>
     
-    init(viewModel: ProportionalMeasuresPickerViewModelProtocol) {
+    init(viewModel: InputPickerViewModelProtocol) {
         
         self.viewModel = viewModel
         self.subscribers = Set()
@@ -40,7 +48,7 @@ class ProportionalMeasuresPickerView: UIPickerView, UIPickerViewDataSource, UIPi
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubscriber() {
+    private func configureSubscriber() {
         
         viewModel.indexesPublisher()
             .sink { [weak self] (indexes) in

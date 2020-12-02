@@ -7,24 +7,16 @@
 
 import SwiftUI
 
-public struct AppTextFieldStyle: TextFieldStyle {
-    
-    public func _body(configuration: TextField<Self._Label>) -> some View {
-        configuration
-            .padding(8)
-    }
-}
-
 struct NumberTextField: View {
     
     @Binding var input: String
     @Binding var isEditing: Bool
     
-     var proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol?
+     var proportionalInputViewModel: InputPickerViewModelProtocol?
     
     init(input: Binding<String>,
          isEditing: Binding<Bool>,
-         proportionalInputViewModel: ProportionalMeasuresPickerViewModelProtocol?
+         proportionalInputViewModel: InputPickerViewModelProtocol?
     ) {
         
         self._input = input
