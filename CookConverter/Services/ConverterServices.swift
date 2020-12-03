@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ConverterServices: ConverterBusinessLogic, MeasurementItemBusinessLogic {
+class ConverterServices: ConverterBusinessLogic, MeasurementBusinessLogic {
     
     let avaliableMassUnits: [UnitMass] = [.grams, .kilograms, .pounds, .ounces]
     let avaliableVolumeUnits: [UnitVolume] = [.liters, .milliliters, .teaspoons, .tablespoons]

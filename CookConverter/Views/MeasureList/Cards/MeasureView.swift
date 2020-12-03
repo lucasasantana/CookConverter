@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol MeasureListItemViewModelProtocol: ObservableObject, Identifiable {
+protocol MeasureViewModelProtocol: ObservableObject, Identifiable {
     
     var proportionalInputViewModel: InputPickerViewModelProtocol? { get }
     
@@ -22,7 +22,7 @@ protocol MeasureListItemViewModelProtocol: ObservableObject, Identifiable {
     func setNumber(_ value: String)
 }
 
-struct MeasureListItem<ViewModel: MeasureListItemViewModelProtocol>: View {
+struct MeasureView<ViewModel: MeasureViewModelProtocol>: View {
     
     @ObservedObject private var viewModel: ViewModel
     
@@ -87,7 +87,7 @@ struct MeasureListItem<ViewModel: MeasureListItemViewModelProtocol>: View {
 
 struct MeasureListItem_Previews: PreviewProvider {
     
-    final class MockViewModel: MeasureListItemViewModelProtocol {
+    final class MockViewModel: MeasureViewModelProtocol {
         
         var proportionalInputViewModel: InputPickerViewModelProtocol?
         
@@ -108,7 +108,7 @@ struct MeasureListItem_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        MeasureListItem(viewModel: MockViewModel())
+        MeasureView(viewModel: MockViewModel())
             .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/375.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
             .environment(\.colorScheme, .light)
     }

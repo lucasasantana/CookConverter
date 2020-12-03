@@ -11,12 +11,12 @@ class MeasureListViewModel: MeasureListViewModelProtocol {
     
     var title: String
     
-    typealias MeasureViewModel = MeasureListItemViewModel
+    typealias ViewModel = MeasureViewModel
     
-    var measures: [MeasureListItemViewModel]
+    var measures: [MeasureViewModel]
     
     init(
-        businessLogic: (ConverterBusinessLogic & MeasurementItemBusinessLogic) = ConverterServices(product: Product(name: "Water", density: 1.0)),
+        businessLogic: (ConverterBusinessLogic & MeasurementBusinessLogic) = ConverterServices(product: Product(name: "Water", icon: "cup", density: 1.0)),
         formatter: AppMeasureFormatter = .appFormatter
     ) {
         
@@ -46,7 +46,7 @@ class MeasureListViewModel: MeasureListViewModelProtocol {
         
         measures = appDimensions
             .map {
-                MeasureListItemViewModel(measureFormatter: formatter, businessLogic: businessLogic, dimension: $0)
+                MeasureViewModel(measureFormatter: formatter, businessLogic: businessLogic, dimension: $0)
             }
             .sorted {$0.title < $1.title }
     }

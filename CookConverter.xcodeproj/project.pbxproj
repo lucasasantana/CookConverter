@@ -34,6 +34,12 @@
 		2A444E8225781BF5001BDC53 /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C27C12570302300335992 /* ConverterView.swift */; };
 		2A444E8825781C6C001BDC53 /* ConverterServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A444E8725781C6C001BDC53 /* ConverterServicesTests.swift */; };
 		2A444E91257822E8001BDC53 /* DoubleFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A444E90257822E8001BDC53 /* DoubleFormatterTests.swift */; };
+		2A452887257863EF00CC9C40 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A452886257863EF00CC9C40 /* ProductListView.swift */; };
+		2A452888257863EF00CC9C40 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A452886257863EF00CC9C40 /* ProductListView.swift */; };
+		2A452889257863EF00CC9C40 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A452886257863EF00CC9C40 /* ProductListView.swift */; };
+		2A4528942578693500CC9C40 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4528932578693500CC9C40 /* ProductListViewModel.swift */; };
+		2A4528952578693500CC9C40 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4528932578693500CC9C40 /* ProductListViewModel.swift */; };
+		2A4528962578693500CC9C40 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4528932578693500CC9C40 /* ProductListViewModel.swift */; };
 		2A5C27C02570302300335992 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C27BF2570302300335992 /* SceneDelegate.swift */; };
 		2A5C27C22570302300335992 /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C27C12570302300335992 /* ConverterView.swift */; };
 		2A5C27C42570302D00335992 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5C27C32570302D00335992 /* Assets.xcassets */; };
@@ -59,9 +65,9 @@
 		2A6529AD25716880006048F4 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529AC25716880006048F4 /* IconView.swift */; };
 		2A6529AE25716880006048F4 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529AC25716880006048F4 /* IconView.swift */; };
 		2A6529AF25716880006048F4 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529AC25716880006048F4 /* IconView.swift */; };
-		2A6529BE2571705D006048F4 /* MeasureListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529BD2571705D006048F4 /* MeasureListItem.swift */; };
-		2A6529BF2571705D006048F4 /* MeasureListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529BD2571705D006048F4 /* MeasureListItem.swift */; };
-		2A6529C02571705D006048F4 /* MeasureListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529BD2571705D006048F4 /* MeasureListItem.swift */; };
+		2A6529BE2571705D006048F4 /* MeasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529BD2571705D006048F4 /* MeasureView.swift */; };
+		2A6529BF2571705D006048F4 /* MeasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529BD2571705D006048F4 /* MeasureView.swift */; };
+		2A6529C02571705D006048F4 /* MeasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6529BD2571705D006048F4 /* MeasureView.swift */; };
 		2A66924A2574664300D51764 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6692492574664300D51764 /* StringTests.swift */; };
 		2A66925825746B8600D51764 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66925725746B8600D51764 /* PaddingTextField.swift */; };
 		2A66925925746B8600D51764 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66925725746B8600D51764 /* PaddingTextField.swift */; };
@@ -136,17 +142,28 @@
 		2A8C554A25743E2300E4245B /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C554925743E2300E4245B /* AppFont.swift */; };
 		2A8C554B25743E2300E4245B /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C554925743E2300E4245B /* AppFont.swift */; };
 		2A8C554C25743E2300E4245B /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C554925743E2300E4245B /* AppFont.swift */; };
-		2A8C555B2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C555A2574527D00E4245B /* MeasureListItemViewModel.swift */; };
-		2A8C555C2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C555A2574527D00E4245B /* MeasureListItemViewModel.swift */; };
-		2A8C555D2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C555A2574527D00E4245B /* MeasureListItemViewModel.swift */; };
+		2A8C555B2574527D00E4245B /* MeasureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C555A2574527D00E4245B /* MeasureViewModel.swift */; };
+		2A8C555C2574527D00E4245B /* MeasureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C555A2574527D00E4245B /* MeasureViewModel.swift */; };
+		2A8C555D2574527D00E4245B /* MeasureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C555A2574527D00E4245B /* MeasureViewModel.swift */; };
 		2A9E20C32573F52200C8ACF3 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */; };
 		2A9E20C42573F52200C8ACF3 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */; };
 		2A9E20C52573F52200C8ACF3 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */; };
 		2ABE59C72575732A00700FF2 /* InputPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59C62575732A00700FF2 /* InputPickerView.swift */; };
 		2ABE59C82575732A00700FF2 /* InputPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59C62575732A00700FF2 /* InputPickerView.swift */; };
 		2ABE59C92575732A00700FF2 /* InputPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE59C62575732A00700FF2 /* InputPickerView.swift */; };
+		2ACD1F5925788E5B00FA9667 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACD1F5825788E5B00FA9667 /* RoundedCorner.swift */; };
+		2ACD1F5A25788E5B00FA9667 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACD1F5825788E5B00FA9667 /* RoundedCorner.swift */; };
+		2ACD1F5B25788E5B00FA9667 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACD1F5825788E5B00FA9667 /* RoundedCorner.swift */; };
 		2AE3B7EB25783877002B95DC /* ProportionalNumbersFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B7EA25783877002B95DC /* ProportionalNumbersFormatterTests.swift */; };
 		2AE3B7F625783FBF002B95DC /* ProportionalMeasuresPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B7F525783FBF002B95DC /* ProportionalMeasuresPickerViewModelTests.swift */; };
+		2AE3B80D25785B26002B95DC /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B80C25785B26002B95DC /* ProductView.swift */; };
+		2AE3B80E25785B26002B95DC /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B80C25785B26002B95DC /* ProductView.swift */; };
+		2AE3B80F25785B26002B95DC /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B80C25785B26002B95DC /* ProductView.swift */; };
+		2AE3B81925785D40002B95DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5C27C32570302D00335992 /* Assets.xcassets */; };
+		2AE3B81D25785D41002B95DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5C27C32570302D00335992 /* Assets.xcassets */; };
+		2AE3B822257862B9002B95DC /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B821257862B9002B95DC /* ProductViewModel.swift */; };
+		2AE3B823257862B9002B95DC /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B821257862B9002B95DC /* ProductViewModel.swift */; };
+		2AE3B824257862B9002B95DC /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3B821257862B9002B95DC /* ProductViewModel.swift */; };
 		2AE731162577F1E0008BADD1 /* ProportionalMeasuresPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE731152577F1E0008BADD1 /* ProportionalMeasuresPickerViewModel.swift */; };
 		2AE7311B2577F5AB008BADD1 /* ProportionalNumbersFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7311A2577F5AB008BADD1 /* ProportionalNumbersFormatter.swift */; };
 		2AE7311C2577F5AB008BADD1 /* ProportionalNumbersFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7311A2577F5AB008BADD1 /* ProportionalNumbersFormatter.swift */; };
@@ -186,6 +203,8 @@
 		2A444E6925781A91001BDC53 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		2A444E8725781C6C001BDC53 /* ConverterServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterServicesTests.swift; sourceTree = "<group>"; };
 		2A444E90257822E8001BDC53 /* DoubleFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleFormatterTests.swift; sourceTree = "<group>"; };
+		2A452886257863EF00CC9C40 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		2A4528932578693500CC9C40 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		2A5C27BA2570302200335992 /* CookConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5C27BD2570302200335992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5C27BF2570302300335992 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,7 +224,7 @@
 		2A64AC0A2571D66E0036C0C8 /* String+NumberFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NumberFormat.swift"; sourceTree = "<group>"; };
 		2A64AC112571D6BA0036C0C8 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		2A6529AC25716880006048F4 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
-		2A6529BD2571705D006048F4 /* MeasureListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureListItem.swift; sourceTree = "<group>"; };
+		2A6529BD2571705D006048F4 /* MeasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureView.swift; sourceTree = "<group>"; };
 		2A6692492574664300D51764 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		2A66925725746B8600D51764 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		2A66928225746DCA00D51764 /* ConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
@@ -232,11 +251,14 @@
 		2A8C54FF25743D2500E4245B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		2A8C553F25743DED00E4245B /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		2A8C554925743E2300E4245B /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
-		2A8C555A2574527D00E4245B /* MeasureListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureListItemViewModel.swift; sourceTree = "<group>"; };
+		2A8C555A2574527D00E4245B /* MeasureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewModel.swift; sourceTree = "<group>"; };
 		2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
 		2ABE59C62575732A00700FF2 /* InputPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPickerView.swift; sourceTree = "<group>"; };
+		2ACD1F5825788E5B00FA9667 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		2AE3B7EA25783877002B95DC /* ProportionalNumbersFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalNumbersFormatterTests.swift; sourceTree = "<group>"; };
 		2AE3B7F525783FBF002B95DC /* ProportionalMeasuresPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalMeasuresPickerViewModelTests.swift; sourceTree = "<group>"; };
+		2AE3B80C25785B26002B95DC /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		2AE3B821257862B9002B95DC /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		2AE731152577F1E0008BADD1 /* ProportionalMeasuresPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalMeasuresPickerViewModel.swift; sourceTree = "<group>"; };
 		2AE7311A2577F5AB008BADD1 /* ProportionalNumbersFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalNumbersFormatter.swift; sourceTree = "<group>"; };
 		2AE7312125780038008BADD1 /* ProportionalNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalNumber.swift; sourceTree = "<group>"; };
@@ -273,26 +295,26 @@
 			children = (
 				2A8C554925743E2300E4245B /* AppFont.swift */,
 				2A02D1972571978400E20249 /* InnerShadow.swift */,
+				2ACD1F5825788E5B00FA9667 /* RoundedCorner.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		2A02D1A125719E9000E20249 /* MeasureListItem */ = {
+		2A02D1A125719E9000E20249 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
 				2A02D1A825719E9F00E20249 /* Components */,
-				2A6529BD2571705D006048F4 /* MeasureListItem.swift */,
-				2A8C555A2574527D00E4245B /* MeasureListItemViewModel.swift */,
+				2A6529BD2571705D006048F4 /* MeasureView.swift */,
+				2A8C555A2574527D00E4245B /* MeasureViewModel.swift */,
 				2AE731152577F1E0008BADD1 /* ProportionalMeasuresPickerViewModel.swift */,
 			);
-			path = MeasureListItem;
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		2A02D1A825719E9F00E20249 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2A6529AC25716880006048F4 /* IconView.swift */,
-				2A66925E25746BB700D51764 /* TextField */,
+				2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -335,6 +357,15 @@
 				2AE3B7EA25783877002B95DC /* ProportionalNumbersFormatterTests.swift */,
 			);
 			path = Formatter;
+			sourceTree = "<group>";
+		};
+		2A45287F257863C400CC9C40 /* ProductView */ = {
+			isa = PBXGroup;
+			children = (
+				2AE3B80C25785B26002B95DC /* ProductView.swift */,
+				2AE3B821257862B9002B95DC /* ProductViewModel.swift */,
+			);
+			path = ProductView;
 			sourceTree = "<group>";
 		};
 		2A5C27B12570302200335992 = {
@@ -431,9 +462,11 @@
 		2A5C27FC257030C600335992 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2AE3B80425785AC0002B95DC /* Components */,
+				2A02D1962571977000E20249 /* Modifiers */,
 				2A5C27C12570302300335992 /* ConverterView.swift */,
 				2A66928225746DCA00D51764 /* ConverterViewModel.swift */,
-				2A02D1962571977000E20249 /* Modifiers */,
+				2AE3B80025785A8A002B95DC /* ProductList */,
 				2A669298257490AE00D51764 /* MeasureList */,
 			);
 			path = Views;
@@ -485,10 +518,9 @@
 		2A66925E25746BB700D51764 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				2A9E20C22573F52200C8ACF3 /* NumberTextField.swift */,
 				2A17F6382574373100FF4826 /* TextFieldView.swift */,
-				2ABE59C62575732A00700FF2 /* InputPickerView.swift */,
 				2A66925725746B8600D51764 /* PaddingTextField.swift */,
+				2ABE59C62575732A00700FF2 /* InputPickerView.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -496,7 +528,7 @@
 		2A669298257490AE00D51764 /* MeasureList */ = {
 			isa = PBXGroup;
 			children = (
-				2A02D1A125719E9000E20249 /* MeasureListItem */,
+				2A02D1A125719E9000E20249 /* Cards */,
 				2A66929F257490C700D51764 /* MeasureListView.swift */,
 				2A6692A62574920300D51764 /* MeasureListViewModel.swift */,
 			);
@@ -568,6 +600,25 @@
 				2AE3B7F525783FBF002B95DC /* ProportionalMeasuresPickerViewModelTests.swift */,
 			);
 			path = MeasureListItem;
+			sourceTree = "<group>";
+		};
+		2AE3B80025785A8A002B95DC /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				2A452886257863EF00CC9C40 /* ProductListView.swift */,
+				2A4528932578693500CC9C40 /* ProductListViewModel.swift */,
+				2A45287F257863C400CC9C40 /* ProductView */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		2AE3B80425785AC0002B95DC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2A6529AC25716880006048F4 /* IconView.swift */,
+				2A66925E25746BB700D51764 /* TextField */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -706,6 +757,7 @@
 				2A8C551625743D2500E4245B /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				2A8C552225743D2500E4245B /* Rubik-SemiBold.ttf in Resources */,
 				2A8C551F25743D2500E4245B /* Rubik-LightItalic.ttf in Resources */,
+				2AE3B81925785D40002B95DC /* Assets.xcassets in Resources */,
 				2A8C550A25743D2500E4245B /* Rubik-Bold.ttf in Resources */,
 				2A8C550D25743D2500E4245B /* Rubik-SemiBoldItalic.ttf in Resources */,
 				2A8C550725743D2500E4245B /* Rubik-MediumItalic.ttf in Resources */,
@@ -729,6 +781,7 @@
 				2A8C551725743D2500E4245B /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				2A8C552325743D2500E4245B /* Rubik-SemiBold.ttf in Resources */,
 				2A8C552025743D2500E4245B /* Rubik-LightItalic.ttf in Resources */,
+				2AE3B81D25785D41002B95DC /* Assets.xcassets in Resources */,
 				2A8C550B25743D2500E4245B /* Rubik-Bold.ttf in Resources */,
 				2A8C550E25743D2500E4245B /* Rubik-SemiBoldItalic.ttf in Resources */,
 				2A8C550825743D2500E4245B /* Rubik-MediumItalic.ttf in Resources */,
@@ -771,20 +824,23 @@
 			files = (
 				2A8C554025743DED00E4245B /* Fonts.swift in Sources */,
 				2A02D1982571978400E20249 /* InnerShadow.swift in Sources */,
+				2A452887257863EF00CC9C40 /* ProductListView.swift in Sources */,
 				2A9E20C32573F52200C8ACF3 /* NumberTextField.swift in Sources */,
 				2A8C554A25743E2300E4245B /* AppFont.swift in Sources */,
 				2A6692B52574953600D51764 /* ConverterServices.swift in Sources */,
 				2AE7312225780038008BADD1 /* ProportionalNumber.swift in Sources */,
 				2A2B84D225752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */,
 				2A64AC122571D6BA0036C0C8 /* NumberFormatter.swift in Sources */,
+				2AE3B80D25785B26002B95DC /* ProductView.swift in Sources */,
 				2A17F6392574373100FF4826 /* TextFieldView.swift in Sources */,
 				2A5C2800257030F400335992 /* AppDelegate.swift in Sources */,
 				2A64ABF52571D3480036C0C8 /* XCAssets+Generated.swift in Sources */,
-				2A6529BE2571705D006048F4 /* MeasureListItem.swift in Sources */,
-				2A8C555B2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */,
+				2A6529BE2571705D006048F4 /* MeasureView.swift in Sources */,
+				2A8C555B2574527D00E4245B /* MeasureViewModel.swift in Sources */,
 				2A6529AD25716880006048F4 /* IconView.swift in Sources */,
 				2ABE59C72575732A00700FF2 /* InputPickerView.swift in Sources */,
 				2AE7311B2577F5AB008BADD1 /* ProportionalNumbersFormatter.swift in Sources */,
+				2AE3B822257862B9002B95DC /* ProductViewModel.swift in Sources */,
 				2A6692C22574960500D51764 /* Product.swift in Sources */,
 				2A5C27C02570302300335992 /* SceneDelegate.swift in Sources */,
 				2A5C27C22570302300335992 /* ConverterView.swift in Sources */,
@@ -792,11 +848,13 @@
 				2A6692A72574920300D51764 /* MeasureListViewModel.swift in Sources */,
 				2A6692A0257490C700D51764 /* MeasureListView.swift in Sources */,
 				2A66925825746B8600D51764 /* PaddingTextField.swift in Sources */,
+				2ACD1F5925788E5B00FA9667 /* RoundedCorner.swift in Sources */,
 				2A2B84C725752852002627E5 /* DefaultMeasures.swift in Sources */,
 				2A64AC0B2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */,
 				2A64ABFF2571D37B0036C0C8 /* Color+Asset.swift in Sources */,
 				2AE731162577F1E0008BADD1 /* ProportionalMeasuresPickerViewModel.swift in Sources */,
 				2AEF6A1B2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */,
+				2A4528942578693500CC9C40 /* ProductListViewModel.swift in Sources */,
 				2A66928325746DCA00D51764 /* ConverterViewModel.swift in Sources */,
 				2A444E6A25781A91001BDC53 /* Formatter.swift in Sources */,
 				2A2B84DF25752EB7002627E5 /* AppUnit.swift in Sources */,
@@ -812,17 +870,21 @@
 				2A8C554125743DED00E4245B /* Fonts.swift in Sources */,
 				2A17F63A2574373100FF4826 /* TextFieldView.swift in Sources */,
 				2A6692B62574953600D51764 /* ConverterServices.swift in Sources */,
+				2AE3B823257862B9002B95DC /* ProductViewModel.swift in Sources */,
+				2A4528952578693500CC9C40 /* ProductListViewModel.swift in Sources */,
 				2AE3B7EB25783877002B95DC /* ProportionalNumbersFormatterTests.swift in Sources */,
+				2ACD1F5A25788E5B00FA9667 /* RoundedCorner.swift in Sources */,
 				2A2B84D325752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */,
 				2AEF6A1C2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */,
 				2A9E20C42573F52200C8ACF3 /* NumberTextField.swift in Sources */,
 				2A02D1992571978400E20249 /* InnerShadow.swift in Sources */,
 				2A66924A2574664300D51764 /* StringTests.swift in Sources */,
 				2A444E6B25781A91001BDC53 /* Formatter.swift in Sources */,
-				2A6529BF2571705D006048F4 /* MeasureListItem.swift in Sources */,
+				2A6529BF2571705D006048F4 /* MeasureView.swift in Sources */,
 				2A444E91257822E8001BDC53 /* DoubleFormatterTests.swift in Sources */,
-				2A8C555C2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */,
+				2A8C555C2574527D00E4245B /* MeasureViewModel.swift in Sources */,
 				2AE7312325780038008BADD1 /* ProportionalNumber.swift in Sources */,
+				2AE3B80E25785B26002B95DC /* ProductView.swift in Sources */,
 				2ABE59C82575732A00700FF2 /* InputPickerView.swift in Sources */,
 				2A6692C32574960500D51764 /* Product.swift in Sources */,
 				2A5C27D52570302D00335992 /* CookConverterTests.swift in Sources */,
@@ -839,6 +901,7 @@
 				2A2B84C825752852002627E5 /* DefaultMeasures.swift in Sources */,
 				2A64AC0C2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */,
 				2A64AC002571D37B0036C0C8 /* Color+Asset.swift in Sources */,
+				2A452888257863EF00CC9C40 /* ProductListView.swift in Sources */,
 				2A64AC132571D6BA0036C0C8 /* NumberFormatter.swift in Sources */,
 				2A444E7625781BD5001BDC53 /* ProportionalMeasuresPickerViewModel.swift in Sources */,
 				2A8C554B25743E2300E4245B /* AppFont.swift in Sources */,
@@ -853,12 +916,14 @@
 			files = (
 				2A444E7A25781BD6001BDC53 /* ProportionalMeasuresPickerViewModel.swift in Sources */,
 				2A444E8225781BF5001BDC53 /* ConverterView.swift in Sources */,
+				2A452889257863EF00CC9C40 /* ProductListView.swift in Sources */,
 				2A66925A25746B8600D51764 /* PaddingTextField.swift in Sources */,
 				2A66928525746DCA00D51764 /* ConverterViewModel.swift in Sources */,
 				2A6692A2257490C700D51764 /* MeasureListView.swift in Sources */,
 				2A5C2808257030F900335992 /* AppDelegate.swift in Sources */,
 				2A6529AF25716880006048F4 /* IconView.swift in Sources */,
 				2AE7311D2577F5AB008BADD1 /* ProportionalNumbersFormatter.swift in Sources */,
+				2AE3B80F25785B26002B95DC /* ProductView.swift in Sources */,
 				2A6692C42574960500D51764 /* Product.swift in Sources */,
 				2A2B84C925752852002627E5 /* DefaultMeasures.swift in Sources */,
 				2A8C554225743DED00E4245B /* Fonts.swift in Sources */,
@@ -867,18 +932,21 @@
 				2AEF6A1D2574145700A2B6A1 /* UIApplication+EndEditting.swift in Sources */,
 				2A444E6C25781A91001BDC53 /* Formatter.swift in Sources */,
 				2A2B84E825753BFF002627E5 /* AppMeasureFormatter.swift in Sources */,
+				2AE3B824257862B9002B95DC /* ProductViewModel.swift in Sources */,
 				2A9E20C52573F52200C8ACF3 /* NumberTextField.swift in Sources */,
 				2A02D19A2571978400E20249 /* InnerShadow.swift in Sources */,
 				2AE7312425780038008BADD1 /* ProportionalNumber.swift in Sources */,
-				2A6529C02571705D006048F4 /* MeasureListItem.swift in Sources */,
+				2A6529C02571705D006048F4 /* MeasureView.swift in Sources */,
 				2A6692A92574920300D51764 /* MeasureListViewModel.swift in Sources */,
-				2A8C555D2574527D00E4245B /* MeasureListItemViewModel.swift in Sources */,
+				2A8C555D2574527D00E4245B /* MeasureViewModel.swift in Sources */,
 				2A6692B72574953600D51764 /* ConverterServices.swift in Sources */,
+				2ACD1F5B25788E5B00FA9667 /* RoundedCorner.swift in Sources */,
 				2A2B84E125752EB7002627E5 /* AppUnit.swift in Sources */,
 				2A5C27E02570302D00335992 /* CookConverterUITests.swift in Sources */,
 				2A64ABF72571D3480036C0C8 /* XCAssets+Generated.swift in Sources */,
 				2A64AC0D2571D66E0036C0C8 /* String+NumberFormat.swift in Sources */,
 				2ABE59C92575732A00700FF2 /* InputPickerView.swift in Sources */,
+				2A4528962578693500CC9C40 /* ProductListViewModel.swift in Sources */,
 				2A64AC012571D37B0036C0C8 /* Color+Asset.swift in Sources */,
 				2A64AC142571D6BA0036C0C8 /* NumberFormatter.swift in Sources */,
 				2A8C554C25743E2300E4245B /* AppFont.swift in Sources */,

@@ -10,6 +10,6 @@ import Foundation
 struct Product {
     
     let name: String
+    let icon: String
     let density: Double
-    
 }

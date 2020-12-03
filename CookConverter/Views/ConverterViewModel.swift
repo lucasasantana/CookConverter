@@ -9,11 +9,16 @@ import Foundation
 
 class ConverterViewModel: ConverterViewModelProtocol {
     
-    typealias MeasureViewModel = MeasureListViewModel
+    typealias MeasureModel = MeasureListViewModel
+    
+    typealias ProductModel = ProductListViewModel
     
     @Published var measures: MeasureListViewModel
     
+    @Published var products: ProductListViewModel
+    
     init() {
         measures = MeasureListViewModel()
+        products = ProductListViewModel()
     }
 }

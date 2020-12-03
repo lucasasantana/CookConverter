@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-protocol MeasurementItemBusinessLogic {
+protocol MeasurementBusinessLogic {
     
     var defaultMeasuresPublisher: AnyPublisher<DefaultMeasures, Never> { get }
     
@@ -16,7 +16,7 @@ protocol MeasurementItemBusinessLogic {
     func convert(measure: Double, withUnit unit: UnitMass)
 }
 
-class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
+class MeasureViewModel: MeasureViewModelProtocol {
     
     @Published var isEditing: Bool
     
@@ -32,7 +32,7 @@ class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
     
     var measureFormatter: AppMeasureFormatter
     
-    var businessLogic: MeasurementItemBusinessLogic
+    var businessLogic: MeasurementBusinessLogic
     
     var dimension: AppDimension {
         didSet {
@@ -43,7 +43,7 @@ class MeasureListItemViewModel: MeasureListItemViewModelProtocol {
     init(
         
         measureFormatter: AppMeasureFormatter,
-        businessLogic: MeasurementItemBusinessLogic,
+        businessLogic: MeasurementBusinessLogic,
         dimension: AppDimension,
         isEditing: Bool = false
         

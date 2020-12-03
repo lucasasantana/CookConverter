@@ -10,8 +10,10 @@ import SwiftUI
 protocol ConverterViewModelProtocol: ObservableObject {
     
     associatedtype MeasureModel: MeasureListViewModelProtocol
+    associatedtype ProductModel: ProductListViewModelProtocol
     
-    var measures: MeasureModel { get set }
+    var products: ProductModel { get }
+    var measures: MeasureModel { get }
 }
 
 struct ConverterView<ViewModel: ConverterViewModelProtocol>: View {
@@ -30,13 +32,22 @@ struct ConverterView<ViewModel: ConverterViewModelProtocol>: View {
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView(showsIndicators: false) {
+                
+                Spacer()
+                    .frame(height: 40)
+                
+                ProductListView(viewModel: viewModel.products)
+                    .horizontalPadding(20)
+                
                 MeasureListView(viewModel: viewModel.measures)
-                    .padding(.horizontal, 20)
+                    .horizontalPadding(20)
+                
             }
             .onTapGesture {
                 UIApplication.shared.endEditing()
             }
         }
+        
     }
 }
 
