@@ -20,5 +20,5 @@ protocol ConverterBusinessLogic {
     func convert(measure: Double, withUnit unit: UnitVolume)
     func convert(measure: Double, withUnit unit: UnitMass)
     
-    func update(product newProduct: Product)
+    func update(density newDensity: Double)
 }

@@ -1,0 +1,89 @@
+[
+    
+    {
+        "density": 0.916,
+        "name": "água"
+    },
+    {
+        "density": 1.00,
+        "name": "café"
+    },
+
+    {
+        "density": 1.032,
+        "name": "leite"
+    },
+    {
+        "density": 0.911,
+        "name": "manteiga"
+    },
+    {
+        "density": 0.34,
+        "name": "queijo"
+    },
+    {
+        "density": 1.06,
+        "name": "iogurte"
+    },
+    {
+        "density": 0.92,
+        "name": "óleo"
+    },
+    {
+        "density": 1.02,
+        "name": "maionese"
+    },
+    {
+        "density": 0.53,
+        "name": "aveia"
+    },
+    {
+        "density": 0.72,
+        "name": "arroz"
+    },
+    {
+        "density": 0.77,
+        "name": "trigo"
+    },
+    {
+        "density": 0.61,
+        "name": "coco"
+    },
+    {
+        "density": 0.63,
+        "name": "nozes"
+    },
+    {
+        "density": 0.53,
+        "name": "amendoim"
+    },
+    {
+        "density": 0.85,
+        "name": "lentilhas"
+    },
+    {
+        "density": 0.74,
+        "name": "soja"
+    },
+    {
+        "density": 0.56,
+        "name": "canela"
+    },
+    {
+        "density": 0.37,
+        "name": "ovo"
+    },
+    {
+        "density": 0.95,
+        "name": "açúcar"
+    },
+    {
+        "density": 2.165,
+        "name": "sal"
+    },
+    {
+        "density": 0.95,
+        "name": "fermento"
+    }
+]
+ 

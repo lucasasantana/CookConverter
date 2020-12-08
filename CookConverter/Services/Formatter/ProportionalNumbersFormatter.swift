@@ -34,7 +34,7 @@ class ProportionalNumbersFormatter: FractionNumbersFormatter {
     
     init(formatter: DoubleFormatter = .appFormatter) {
         self.doubleFormatter = formatter
-        self.avaliableNumbers = [(0...50).map {String($0)}, ["0", "1/4", "1/3", "1/2", "2/3", "3/4"]]
+        self.avaliableNumbers = [(0...500 ).map {String($0)}, ["0", "1/4", "1/3", "1/2", "2/3", "3/4"]]
     }
     
     func value(fromLocalizedString value: String) -> Double? {

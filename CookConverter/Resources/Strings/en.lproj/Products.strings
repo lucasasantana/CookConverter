@@ -1,0 +1,79 @@
+/* 
+  Products.strings
+  CookConverter
+
+  Created by Lucas Antevere Santana on 07/12/20.
+  
+*/
+
+"soja" = "soy";
+
+"água" = "water";
+
+"café" = "coffer";
+
+"leite" = "milk";
+
+"manteiga" = "butter";
+
+"queijo" = "cheese";
+
+"creme" = "cream";
+
+"iogurte" = "yogurt";
+
+"óleo" = "oil";
+
+"banha" = "lard";
+
+"maionese" = "mayonnaise";
+
+"cevada" = "barley";
+
+"milho" = "corn";
+
+"aveia" = "oats";
+
+"arroz" = "rice";
+
+"centeio" = "rye";
+
+"semolina" = "semolina";
+
+"trigo" = "wheat";
+
+"suplemento" = "supplement";
+
+"amêndoas" = "almonds";
+
+"coco" = "coconut";
+
+"nozes" = "walnuts";
+
+"amendoim" = "peanut";
+
+"pistache" = "pistachio";
+
+"cenoura" = "carrot";
+
+"azeitonas" = "olives";
+
+"cebolas" = "onions";
+
+"feijão" = "beans";
+
+"lentilhas" = "lentils";
+
+"canela" = "cinnamon";
+
+"alho" = "garlic";
+
+"ovo" = "egg";
+
+"açúcar" = "sugar";
+
+"mostarda" = "mustard";
+
+"sal" = "salt";
+
+"fermento" = "yeast";

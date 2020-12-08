@@ -30,13 +30,13 @@ class ConverterServices: ConverterBusinessLogic, MeasurementBusinessLogic {
     
     private(set) var density: Double
     
-    init(product: Product) {
+    init(initialDensity: Double = 1.0) {
         
         lastSelectedUnitType = .mass
         
         defaultMeasurements = AppDefaultMeasures()
         
-        density = product.density
+        density = initialDensity
         
         subject = CurrentValueSubject(defaultMeasurements)
     }
@@ -82,9 +82,9 @@ class ConverterServices: ConverterBusinessLogic, MeasurementBusinessLogic {
         subject.send(defaultMeasurements)
     }
     
-    func update(product newProduct: Product) {
+    func update(density newDensity: Double) {
         
-        self.density = newProduct.density
+        self.density = newDensity
         
         switch lastSelectedUnitType {
             

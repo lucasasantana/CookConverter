@@ -107,8 +107,9 @@ struct TextFieldView: UIViewRepresentable {
             let toolbar = UIToolbar()
             
             let okItem = UIBarButtonItem(barButtonSystemItem: .done, target: context.coordinator, action: #selector(Coordinator.dismissTextField))
-            
-            toolbar.setItems([UIBarButtonItem(systemItem: .flexibleSpace), okItem], animated: false)
+            let flexItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+
+            toolbar.setItems([flexItem, okItem], animated: false)
             
             textField.inputAccessoryView = toolbar
             

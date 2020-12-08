@@ -48,9 +48,10 @@ struct ProductView<ViewModel: ProductViewModelProtocol>: View {
             
             VStack {
                 
-                IconView(viewModel.imageName)
+//                IconView(viewModel.imageName)
                 
                 Text(viewModel.productName)
+                    .fixedSize(horizontal: true, vertical: false)
                     .appFont(weight: .bold, textStyle: .body)
                     .foregroundColor(viewModel.isSelected ? Color.black : Color.primary)
             }

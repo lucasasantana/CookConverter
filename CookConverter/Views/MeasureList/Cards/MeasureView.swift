@@ -48,7 +48,7 @@ struct MeasureView<ViewModel: MeasureViewModelProtocol>: View {
         
         HStack {
             
-            IconView(viewModel.imageName)
+//            IconView(viewModel.imageName)
             
             Spacer()
                 .frame(width: 16)

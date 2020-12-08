@@ -30,6 +30,12 @@
        params:
          forceProvidesNamespaces: true
        output: Resources/Assets/XCAssets+Generated.swift
+       
+ strings:
+   inputs: Resources/Strings/pt-BR.lproj
+   outputs:
+     - templateName: structured-swift5
+       output: Resources/Strings/Strings.swift
 
 
 ## Generate constants for your storyboards and XIBs.
@@ -45,6 +51,8 @@
 #       output: IB-Scenes+Generated.swift
 #     - templateName: segues-swift5
 #       output: IB-Segues+Generated.swift
+
+ 
 
  fonts:
     inputs:

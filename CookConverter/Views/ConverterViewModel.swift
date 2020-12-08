@@ -18,7 +18,10 @@ class ConverterViewModel: ConverterViewModelProtocol {
     @Published var products: ProductListViewModel
     
     init() {
-        measures = MeasureListViewModel()
-        products = ProductListViewModel()
+        
+        let converterServices = ConverterServices()
+        
+        measures = MeasureListViewModel(businessLogic: converterServices)
+        products = ProductListViewModel(converterServices: converterServices)
     }
 }

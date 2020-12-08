@@ -15,7 +15,7 @@ protocol ProductListViewModelProtocol: ObservableObject {
     
     var products: [ViewModel] { get }
     
-    func selectProduct(index: Int)
+    func selectProduct(product: ViewModel)
 }
 
 struct ProductListView<ViewModel: ProductListViewModelProtocol>: View {
@@ -44,12 +44,13 @@ struct ProductListView<ViewModel: ProductListViewModelProtocol>: View {
                     
                     paddingSpacer()
                     
-                    ForEach(0..<viewModel.products.count) { index in
+                    ForEach(viewModel.products) { product in
                         
-                        ProductView(viewModel: viewModel.products[index])
-                            .aspectRatio(1.0, contentMode: .fit)
+                        ProductView(viewModel: product)
+                            .aspectRatio(1.5, contentMode: .fit)
+                            .fixedSize(horizontal: false, vertical: false)
                             .onTapGesture {
-                                self.viewModel.selectProduct(index: index)
+                                self.viewModel.selectProduct(product: product)
                             }
                     }
                     
@@ -101,7 +102,7 @@ struct ProductListView_Previews: PreviewProvider {
                 ProductViewModel(product: Product(name: "Rice", icon: "cup", density: 1.0), isSelected: false)]
         }
         
-        func selectProduct(index: Int) {}
+        func selectProduct(product: ProductViewModel) {}
     }
     
     static var previews: some View {

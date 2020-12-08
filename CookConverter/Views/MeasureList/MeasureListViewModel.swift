@@ -16,7 +16,7 @@ class MeasureListViewModel: MeasureListViewModelProtocol {
     var measures: [MeasureViewModel]
     
     init(
-        businessLogic: (ConverterBusinessLogic & MeasurementBusinessLogic) = ConverterServices(product: Product(name: "Water", icon: "cup", density: 1.0)),
+        businessLogic: (ConverterBusinessLogic & MeasurementBusinessLogic),
         formatter: AppMeasureFormatter = .appFormatter
     ) {
         
@@ -42,7 +42,7 @@ class MeasureListViewModel: MeasureListViewModelProtocol {
         
         measures = []
         
-        title = "Measures"
+        title = L10n.measures.capitalized
         
         measures = appDimensions
             .map {

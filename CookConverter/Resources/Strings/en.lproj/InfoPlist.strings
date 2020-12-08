@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  CookConverter
+
+  Created by Lucas Antevere Santana on 07/12/20.
+  
+*/
+
+"CFBundleDisplayName" = "Culiverter";
+
+"CFBundleName" = "Culiverter";

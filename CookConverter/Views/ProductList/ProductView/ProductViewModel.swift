@@ -7,18 +7,21 @@
 
 import Foundation
 
-class ProductViewModel: ProductViewModelProtocol {
+class ProductViewModel: ProductViewModelProtocol, Equatable {
     
     @Published var isSelected: Bool
     
-    var imageName: String
+    let imageName: String
     
-    var productName: String
+    let productName: String
+    
+    let density: Double
     
     init(product: Product, isSelected: Bool) {
         self.imageName = product.icon
         self.productName = product.name.capitalized
         self.isSelected = isSelected
+        self.density = product.density
     }
     
     func select() {
@@ -27,5 +30,10 @@ class ProductViewModel: ProductViewModelProtocol {
     
     func deselect() {
         isSelected = false
+    }
+    
+    static func == (lhs: ProductViewModel, rhs: ProductViewModel) -> Bool {
+        return lhs.imageName == rhs.imageName &&
+               lhs.productName == rhs.productName
     }
 }

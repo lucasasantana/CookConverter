@@ -83,6 +83,6 @@ struct MeasureListView<ViewModel: MeasureListViewModelProtocol>: View {
 struct MeasureListView_Previews: PreviewProvider {
     
     static var previews: some View {
-        MeasureListView(viewModel: MeasureListViewModel())
+        MeasureListView(viewModel: MeasureListViewModel(businessLogic: ConverterServices()))
     }
 }
