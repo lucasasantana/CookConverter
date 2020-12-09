@@ -122,12 +122,18 @@ class MeasureViewModel: MeasureViewModelProtocol {
                 .store(in: &subscribers)
         }
     }
-    
     func setNumber(_ value: String) {
         
-        let value = value.doubleInputFormatting()
+        let formattedValue: String
         
-        guard let doubleValue = measureFormatter.value(fromLocalizedString: value) else {
+        if value.count < 8 {
+            formattedValue = value.doubleInputFormatting()
+            
+        } else {
+            formattedValue = value
+        }
+    
+        guard let doubleValue = measureFormatter.value(fromLocalizedString: formattedValue) else {
             self.number = measureFormatter.localizedZero
             return
         }

@@ -11,7 +11,7 @@ import Combine
 class ConverterServices: ConverterBusinessLogic, MeasurementBusinessLogic {
     
     let avaliableMassUnits: [UnitMass] = [.grams, .kilograms, .pounds, .ounces]
-    let avaliableVolumeUnits: [UnitVolume] = [.liters, .milliliters, .teaspoons, .tablespoons]
+    let avaliableVolumeUnits: [UnitVolume] = [.liters, .milliliters, .teaspoons, .tablespoons, .cups]
     
     private var defaultMeasurements: AppDefaultMeasures
     

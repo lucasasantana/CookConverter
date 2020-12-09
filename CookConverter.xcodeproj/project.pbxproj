@@ -484,10 +484,10 @@
 		2A5C27FC257030C600335992 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A66928225746DCA00D51764 /* ConverterViewModel.swift */,
+				2A5C27C12570302300335992 /* ConverterView.swift */,
 				2AE3B80425785AC0002B95DC /* Components */,
 				2A02D1962571977000E20249 /* Modifiers */,
-				2A5C27C12570302300335992 /* ConverterView.swift */,
-				2A66928225746DCA00D51764 /* ConverterViewModel.swift */,
 				2AE3B80025785A8A002B95DC /* ProductList */,
 				2A669298257490AE00D51764 /* MeasureList */,
 			);

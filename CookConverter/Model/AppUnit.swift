@@ -8,7 +8,7 @@
 import Foundation
 
 struct AppDimension {
- 
+    
     let iconName: String
     let unit: AppUnit
     
@@ -19,8 +19,32 @@ enum AppDimensionValueType {
     case numeric
 }
 
-enum AppUnit {
+enum AppUnit: Equatable {
     
     case mass(unit: UnitMass)
     case volume(unit: UnitVolume)
+    
+    static func == (lhs: AppUnit, rhs: AppUnit) -> Bool {
+        
+        switch lhs {
+            
+            case .mass(let lhsMassUnit):
+                
+                if case AppUnit.mass(let rhsMassUnit) = rhs {
+                    return lhsMassUnit == rhsMassUnit
+                    
+                } else {
+                    return false
+                }
+                
+            case .volume(let lhsVolumeUnit):
+                
+                if case AppUnit.volume(let rhsVolumeUnit) = rhs {
+                    return lhsVolumeUnit == rhsVolumeUnit
+                    
+                } else {
+                    return false
+                }
+        }
+    }
 }

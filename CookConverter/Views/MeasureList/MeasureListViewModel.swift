@@ -26,7 +26,7 @@ class MeasureListViewModel: MeasureListViewModelProtocol {
             
             switch unit {
                 
-                case UnitVolume.tablespoons, UnitVolume.teaspoons:
+                case UnitVolume.tablespoons, UnitVolume.teaspoons, UnitVolume.cups:
                     valueType = .proportional
                     
                 default:
