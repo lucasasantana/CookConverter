@@ -94,6 +94,7 @@
 		2A66DB4D257ED04F00545C1F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66DB4C257ED04F00545C1F /* Strings.swift */; };
 		2A681332257F1CCA00288A3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A681334257F1CCA00288A3F /* InfoPlist.strings */; };
 		2A7907E42578374A00B51ECD /* AppMeasureFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7907E32578374A00B51ECD /* AppMeasureFormatterTests.swift */; };
+		2A8A6B2A258070D7000B04C0 /* View+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A6B29258070D7000B04C0 /* View+Alert.swift */; };
 		2A8C550625743D2500E4245B /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C54F025743D2400E4245B /* Rubik-MediumItalic.ttf */; };
 		2A8C550725743D2500E4245B /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C54F025743D2400E4245B /* Rubik-MediumItalic.ttf */; };
 		2A8C550825743D2500E4245B /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C54F025743D2400E4245B /* Rubik-MediumItalic.ttf */; };
@@ -249,6 +250,7 @@
 		2A681333257F1CCA00288A3F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2A681335257F1CCD00288A3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A7907E32578374A00B51ECD /* AppMeasureFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMeasureFormatterTests.swift; sourceTree = "<group>"; };
+		2A8A6B29258070D7000B04C0 /* View+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Alert.swift"; sourceTree = "<group>"; };
 		2A8C54F025743D2400E4245B /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		2A8C54F125743D2400E4245B /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		2A8C54F225743D2400E4245B /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				2A8C554925743E2300E4245B /* AppFont.swift */,
 				2A02D1972571978400E20249 /* InnerShadow.swift */,
 				2ACD1F5825788E5B00FA9667 /* RoundedCorner.swift */,
+				2A8A6B29258070D7000B04C0 /* View+Alert.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				2AE7312225780038008BADD1 /* ProportionalNumber.swift in Sources */,
 				2A66DB4D257ED04F00545C1F /* Strings.swift in Sources */,
 				2A2B84D225752DF6002627E5 /* ConverterBusinessLogic.swift in Sources */,
+				2A8A6B2A258070D7000B04C0 /* View+Alert.swift in Sources */,
 				2A64AC122571D6BA0036C0C8 /* NumberFormatter.swift in Sources */,
 				2AE3B80D25785B26002B95DC /* ProductView.swift in Sources */,
 				2A17F6392574373100FF4826 /* TextFieldView.swift in Sources */,
