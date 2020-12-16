@@ -28,7 +28,7 @@ struct ConverterView<ViewModel: ConverterViewModelProtocol>: View {
             
         ZStack {
             
-            Color(Asset.Colors.defaultBackground)
+            Color(Colors.defaultBackground)
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView(showsIndicators: false) {

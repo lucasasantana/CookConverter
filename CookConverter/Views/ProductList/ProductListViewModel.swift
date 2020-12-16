@@ -28,7 +28,7 @@ class ProductListViewModel: ProductListViewModelProtocol {
         productServices: ProductBusinessLogic = ProductServices()
     ) {
         
-        self.title = L10n.ingredients.capitalized
+        self.title = AppStrings.Common.ingredients.capitalized
         
         self.products = []
         
@@ -44,8 +44,6 @@ class ProductListViewModel: ProductListViewModelProtocol {
     
     func configureSubscribers() {
         
-        // swiftlint:disable no_space_in_method_call multiple_closures_with_trailing_closure
-        
         self.productServices.productsPublisher.sink { (error) in
             NSLog("Unsolved error at Product List View Model: \(error)")
             
@@ -60,8 +58,6 @@ class ProductListViewModel: ProductListViewModelProtocol {
         .store(in: &subscribers)
         
         self.productServices.retrieveProducts()
-        
-        // swiftlint:enable no_space_in_method_call multiple_closures_with_trailing_closure
     }
     
     func selectProduct(product: ProductViewModel) {
