@@ -141,7 +141,12 @@ struct TextFieldView: UIViewRepresentable {
     
     final class Coordinator: NSObject, UITextFieldDelegate {
         
-        @Binding var text: String
+        @Binding var text: String {
+            didSet {
+                textField?.text = text
+            }
+        }
+        
         @Binding var isEditing: Bool
         
         var didBeginEditing: () -> Void

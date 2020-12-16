@@ -42,7 +42,12 @@ struct NumberTextField: View {
     
     func makeTextField() -> TextFieldView {
         
-        var view = TextFieldView("Number Input", text: $input, isEditing: $isEditing, withToolbar: true)
+        var view = TextFieldView(
+            "Number Input",
+            text: $input,
+            isEditing: $isEditing,
+            withToolbar: true
+        )
             .keyboardType(.decimalPad)
             .multilineTextAlignment(.center)
             .appFont(weight: .bold, textStyle: .body)

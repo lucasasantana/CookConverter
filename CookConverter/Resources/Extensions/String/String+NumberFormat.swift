@@ -9,6 +9,10 @@ import Foundation
 
 extension String {
     
+    func removeLast() -> String {
+        String(self.dropLast())
+    }
+    
     func doubleInputFormatting(formatter: DoubleFormatter = .appFormatter) -> String {
         
         var amountWithPrefix = self
