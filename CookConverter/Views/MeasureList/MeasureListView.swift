@@ -31,7 +31,7 @@ struct MeasureListView<ViewModel: MeasureListViewModelProtocol>: View {
         
         ZStack {
             
-            Color(Asset.Colors.listBackground)
+            Color(Colors.listBackground)
                 .cornerRadius(24, corners: [UIRectCorner.topLeft, UIRectCorner.topRight])
             
             VStack(alignment: .leading, spacing: 16) {
@@ -45,7 +45,7 @@ struct MeasureListView<ViewModel: MeasureListViewModelProtocol>: View {
                     
                     ZStack {
                         
-                        Color(Asset.Colors.listCardBackground)
+                        Color(Colors.listCardBackground)
                         
                         MeasureView(viewModel: measure)
                             
