@@ -28,7 +28,10 @@ class MeasureListViewModel: MeasureListViewModelProtocol {
                 
                 switch unit {
                     
-                    case .volume(let volumeUnit) where volumeUnit == UnitVolume.tablespoons || volumeUnit == UnitVolume.teaspoons:
+                    case .volume(let volumeUnit) where
+                            volumeUnit == UnitVolume.tablespoons ||
+                            volumeUnit == UnitVolume.teaspoons ||
+                            volumeUnit == UnitVolume.cups:
                         dimension = AppDimension(iconName: "cup", unit: .volume(unit: volumeUnit), valueType: .proportional)
                         
                     case .volume(let volumeUnit):

@@ -166,4 +166,5 @@ class MeasureViewModel: MeasureViewModelProtocol {
         
         self.number = string ?? measureFormatter.localizedZero
     }
+    
 }

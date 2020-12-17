@@ -17,9 +17,9 @@ struct AppDefaultMeasures: DefaultMeasures {
     private(set) var mass: Measurement<UnitMass>
     private(set) var volume: Measurement<UnitVolume>
     
-    init(massUnit: UnitMass = .grams, volumeUnit: UnitVolume = .cubicCentimeters) {
-        mass = Measurement(value: .zero, unit: massUnit)
-        volume = Measurement(value: .zero, unit: volumeUnit)
+    init( massUnit: UnitMass = .grams, volumeUnit: UnitVolume = .cubicCentimeters) {
+        self.mass = Measurement(value: .zero, unit: massUnit)
+        self.volume = Measurement(value: .zero, unit: volumeUnit)
     }
     
     mutating func updateMass(value: Double) {

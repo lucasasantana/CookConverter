@@ -46,7 +46,6 @@ struct MeasureListView<ViewModel: MeasureListViewModelProtocol>: View {
                     ZStack {
                         
                         Color(Colors.listCardBackground)
-                        
                         MeasureView(viewModel: measure)
                             
                     }

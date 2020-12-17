@@ -11,6 +11,8 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum AppStrings {
   internal enum Common {
+    /// zerar
+    internal static let clearNumberText = AppStrings.tr("Common", "clear_number_text")
     /// ingredientes
     internal static let ingredients = AppStrings.tr("Common", "ingredients")
     /// medidas
