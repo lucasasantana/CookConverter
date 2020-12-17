@@ -16,7 +16,7 @@ class ConverterServices: ConverterBusinessLogic, MeasurementBusinessLogic {
         UnitVolume.milliliters,
         UnitVolume.cups,
         UnitVolume.tablespoons,
-        UnitVolume.tablespoons,
+        UnitVolume.teaspoons,
         UnitVolume.liters,
         UnitMass.pounds,
         UnitMass.ounces
