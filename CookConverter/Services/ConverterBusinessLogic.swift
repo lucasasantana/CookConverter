@@ -10,8 +10,7 @@ import Foundation
 
 protocol ConverterBusinessLogic {
     
-    var avaliableMassUnits: [UnitMass] { get }
-    var avaliableVolumeUnits: [UnitVolume] { get }
+    var avaliableDimensions: [Dimension] { get }
     
     var density: Double { get }
     

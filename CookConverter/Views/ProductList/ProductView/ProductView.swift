@@ -17,8 +17,6 @@ protocol ProductViewModelProtocol: ObservableObject, Identifiable {
 
 struct ProductView<ViewModel: ProductViewModelProtocol>: View {
     
-    typealias Colors = Asset.Colors
-    
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {

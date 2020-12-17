@@ -106,10 +106,24 @@ struct TextFieldView: UIViewRepresentable {
             
             let toolbar = UIToolbar()
             
-            let okItem = UIBarButtonItem(barButtonSystemItem: .done, target: context.coordinator, action: #selector(Coordinator.dismissTextField))
+            let clearTitle = AppStrings.Common.clearNumberText.capitalized
+            
+            let clearItem = UIBarButtonItem(
+                title: clearTitle,
+                style: .plain,
+                target: context.coordinator,
+                action: #selector(Coordinator.clearTextField)
+            )
+            
+            let okItem = UIBarButtonItem(
+                barButtonSystemItem: .done,
+                target: context.coordinator,
+                action: #selector(Coordinator.dismissTextField)
+            )
+            
             let flexItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
-            toolbar.setItems([flexItem, okItem], animated: false)
+            toolbar.setItems([clearItem, flexItem, okItem], animated: false)
             
             textField.inputAccessoryView = toolbar
             
@@ -141,7 +155,12 @@ struct TextFieldView: UIViewRepresentable {
     
     final class Coordinator: NSObject, UITextFieldDelegate {
         
-        @Binding var text: String
+        @Binding var text: String {
+            didSet {
+                textField?.text = text
+            }
+        }
+        
         @Binding var isEditing: Bool
         
         var didBeginEditing: () -> Void
@@ -185,6 +204,10 @@ struct TextFieldView: UIViewRepresentable {
         
         @objc func dismissTextField(_ button: UIBarButtonItem) {
             textField?.resignFirstResponder()
+        }
+        
+        @objc func clearTextField(_ button: UIBarButtonItem) {
+            text = ""
         }
         
         func textFieldDidEndEditing(_ textField: UITextField) {

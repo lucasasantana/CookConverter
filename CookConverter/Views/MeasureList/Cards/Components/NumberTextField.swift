@@ -28,13 +28,13 @@ struct NumberTextField: View {
         
         ZStack {
             
-            Color(Asset.Colors.iconBackground)
+            Color(Colors.iconBackground)
             
             makeTextField()
         }
         .clipShape(RoundedRectangle(cornerRadius: 6.0))
         .innerShadow(.roundedRect(cornerRadius: 6.0),
-                     backgroundColor: Color(Asset.Colors.iconBackground),
+                     backgroundColor: Color(Colors.iconBackground),
                      shadowColor: Color.black.opacity(0.5),
                      borderWidth: 1.0,
                      offset: CGPoint(x: 0, y: 2))
@@ -42,11 +42,16 @@ struct NumberTextField: View {
     
     func makeTextField() -> TextFieldView {
         
-        var view = TextFieldView("Number Input", text: $input, isEditing: $isEditing, withToolbar: true)
+        var view = TextFieldView(
+            "Number Input",
+            text: $input,
+            isEditing: $isEditing,
+            withToolbar: true
+        )
             .keyboardType(.decimalPad)
             .multilineTextAlignment(.center)
             .appFont(weight: .bold, textStyle: .body)
-            .foregroundColor(Asset.Colors.numberFieldLabel)
+            .foregroundColor(Colors.numberFieldLabel)
             .accentColor(.clear)
         
         if let inputViewModel = proportionalInputViewModel {

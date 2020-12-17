@@ -23,7 +23,7 @@ struct IconView: View {
             .clipShape(Circle())
             .innerShadow(
                 .circle,
-                backgroundColor: Color(Asset.Colors.iconBackground),
+                backgroundColor: Color(Colors.iconBackground),
                 shadowColor: Color.black.opacity(0.5),
                 borderWidth: 2.0,
                 offset: CGPoint(x: 0, y: 2)
