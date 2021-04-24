@@ -13,6 +13,6 @@ Feel free to clone the project and use it as an example to study the Frameworks 
 
 Feedbacks are also welcome !!!!
 
-Then, download **Cook Converver** [from the App Store](https://apps.apple.com/us/app/culiversor/id1543824498) and forget how many tablespoons you need to measure 300g of butter !!!
+Then, download **Cook Converver** [on the App Store](https://apps.apple.com/us/app/culiversor/id1543824498) and forget how many tablespoons you need to measure 300g of butter !!!
 
 Icon made by: [https://www.flaticon.com/authors/freepik|(https://www.flaticon.com/authors/freepik)
