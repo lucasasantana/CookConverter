@@ -96,16 +96,18 @@ struct TextFieldView: UIViewRepresentable {
         textField.setContentHuggingPriority(.defaultHigh, for: .vertical)
         textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         
-        textField.addTarget(context.coordinator, action: #selector(Coordinator.textFieldDidChange), for: .editingChanged)
+        textField.addTarget(
+            context.coordinator,
+            action: #selector(Coordinator.textFieldDidChange),
+            for: .editingChanged
+        )
         
         textField.accessibilityLabel = title
-        
         textField.inputView = inputView
         
         if toolbar {
             
             let toolbar = UIToolbar()
-            
             let clearTitle = AppStrings.Common.clearNumberText.capitalized
             
             let clearItem = UIBarButtonItem(
@@ -124,9 +126,8 @@ struct TextFieldView: UIViewRepresentable {
             let flexItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
             toolbar.setItems([clearItem, flexItem, okItem], animated: false)
-            
             textField.inputAccessoryView = toolbar
-            
+        
             toolbar.sizeToFit()
         }
         
@@ -146,11 +147,13 @@ struct TextFieldView: UIViewRepresentable {
     }
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(text: $text,
-                           isEditing: $isEditing,
-                           didBeginEditing: didEndEditing,
-                           didChange: didChange,
-                           didEndEditing: didEndEditing)
+        Coordinator(
+            text: $text,
+            isEditing: $isEditing,
+            didBeginEditing: didEndEditing,
+            didChange: didChange,
+            didEndEditing: didEndEditing
+        )
     }
     
     final class Coordinator: NSObject, UITextFieldDelegate {
@@ -184,9 +187,7 @@ struct TextFieldView: UIViewRepresentable {
         }
         
         func textFieldDidBeginEditing(_ textField: UITextField) {
-            
             DispatchQueue.main.async {
-                
                 if !self.isEditing {
                     self.isEditing = true
                 }
@@ -196,9 +197,7 @@ struct TextFieldView: UIViewRepresentable {
         }
         
         @objc func textFieldDidChange(_ textField: UITextField) {
-            
             text = textField.text ?? ""
-            
             didChange()
         }
         
@@ -211,9 +210,7 @@ struct TextFieldView: UIViewRepresentable {
         }
         
         func textFieldDidEndEditing(_ textField: UITextField) {
-            
             DispatchQueue.main.async {
-                
                 if self.isEditing {
                     self.isEditing = false
                 }
@@ -235,88 +232,61 @@ extension TextFieldView {
         
         typealias Family = FontFamily.Rubik
         
-        let font: FontConvertible
-        
-        switch weight {
-            
-            case .black:
-                font = Family.black
-                
-            case .bold, .heavy:
-                font = Family.bold
-                
-            case .light, .thin, .ultraLight:
-                font = Family.light
-                
-            case .medium:
-                font = Family.medium
-                
-            case .regular:
-                font = Family.regular
-                
-            case .semibold:
-                font = Family.semiBold
-                
-            default:
-                font = Family.regular
-        }
+        let font: FontConvertible = {
+            switch weight {
+                case .black:                     return Family.black
+                case .medium:                    return Family.medium
+                case .regular:                   return Family.regular
+                case .semibold:                  return Family.semiBold
+                case .bold, .heavy:              return Family.bold
+                case .light, .thin, .ultraLight: return Family.light
+                default:                         return Family.regular
+            }
+        }()
         
         if !UIFont.fontNames(forFamilyName: font.family).contains(font.name) {
             font.register()
         }
         
         let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: textStyle)
-        
         var view = self
-        
+
         view.font = UIFont(font: font, size: descriptor.pointSize)
         
         return view
     }
     
     func font(_ font: UIFont?) -> TextFieldView {
-        
         var view = self
-        
         view.font = font
-        
         return view
     }
     
     func foregroundColor(_ color: ColorAsset) -> TextFieldView {
-        
         var view = self
         view.foregroundColor = UIColor(asset: color)
-        
         return view
     }
     
     func foregroundColor(_ color: UIColor?) -> TextFieldView {
-        
         var view = self
         view.foregroundColor = color
-        
         return view
     }
     
     func accentColor(_ accentColor: UIColor?) -> TextFieldView {
-        
         var view = self
         view.accentColor = accentColor
-        
         return view
     }
     
     func accentColor(_ color: ColorAsset) -> TextFieldView {
-        
         var view = self
         view.accentColor = UIColor(asset: color)
-        
         return view
     }
     
     func multilineTextAlignment(_ alignment: TextAlignment) -> TextFieldView {
-        
         var view = self
         
         switch alignment {
@@ -335,10 +305,8 @@ extension TextFieldView {
     }
     
     func textContentType(_ textContentType: UITextContentType?) -> TextFieldView {
-        
         var view = self
         view.contentType = textContentType
-        
         return view
     }
     
@@ -399,9 +367,7 @@ extension TextFieldView {
         }
         
         var view = self
-        
         let picker = InputPickerView(viewModel: viewModel)
-        
         view.inputView = picker
         
         return view

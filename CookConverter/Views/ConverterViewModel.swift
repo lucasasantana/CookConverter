@@ -10,17 +10,13 @@ import Foundation
 class ConverterViewModel: ConverterViewModelProtocol {
     
     typealias MeasureModel = MeasureListViewModel
-    
     typealias ProductModel = ProductListViewModel
     
     @Published var measures: MeasureListViewModel
-    
     @Published var products: ProductListViewModel
     
     init() {
-        
         let converterServices = ConverterServices()
-        
         measures = MeasureListViewModel(businessLogic: converterServices)
         products = ProductListViewModel(converterServices: converterServices)
     }

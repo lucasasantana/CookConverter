@@ -7,14 +7,22 @@
 
 import Foundation
 
+/// Describes a Formatter that convert fractions to Number
 protocol FractionNumbersFormatter: Formatter {
     
+    /// The Integer and Decimal parts avaliable on this formatter
     var avaliableNumbers: [[String]] { get }
     
+    /// The indexes of the avaliable numbers based on a given number
+    /// - Parameter number: The number to be evaluated
     func indexes(from number: NumberType) -> (integer: Int, decimal: Int)
     
+    /// Converts the pair of indexes into a full string
+    /// - Parameter indexes: The indexes of the avaliableNumbers attribute
     func localizedString(indexes: (integer: Int, decimal: Int)) -> String?
     
+    /// Converts the pair of indexes into a number
+    /// - Parameter indexes: The indexes of the avaliableNumbers attribute
     func value(indexes: (integer: Int, decimal: Int)) -> NumberType?
 }
 

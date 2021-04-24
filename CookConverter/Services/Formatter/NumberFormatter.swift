@@ -9,7 +9,7 @@ import UIKit
 
 import Foundation
 
-/// NumberFormatter specific to Currency Values
+/// NumberFormatter specific to Double Values
 class DoubleFormatter: Formatter {
     
     typealias NumberType = Double

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A Number Formatter that can also convert an unit
 protocol MeasureFormatter: Formatter {
     func localizedString(from unit: Unit) -> String
 }

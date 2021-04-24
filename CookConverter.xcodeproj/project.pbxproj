@@ -183,6 +183,7 @@
 		CD05826F258AACE300EDF37B /* Icons-constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05826E258AACE300EDF37B /* Icons-constants.swift */; };
 		CD058274258AACEC00EDF37B /* Colors-constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD058273258AACEC00EDF37B /* Colors-constants.swift */; };
 		CD058279258AAE9F00EDF37B /* Array+AppUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD058278258AAE9F00EDF37B /* Array+AppUnit.swift */; };
+		CDF73948258F9D6B007013A0 /* ProductJSONDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF73947258F9D6B007013A0 /* ProductJSONDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +288,7 @@
 		CD05826E258AACE300EDF37B /* Icons-constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Icons-constants.swift"; sourceTree = "<group>"; };
 		CD058273258AACEC00EDF37B /* Colors-constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors-constants.swift"; sourceTree = "<group>"; };
 		CD058278258AAE9F00EDF37B /* Array+AppUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+AppUnit.swift"; sourceTree = "<group>"; };
+		CDF73947258F9D6B007013A0 /* ProductJSONDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductJSONDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -588,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				2A66DB2C257EC29600545C1F /* ProductDataStore.swift */,
+				CDF73946258F9D57007013A0 /* JSON */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -694,6 +697,14 @@
 				2A5C27C32570302D00335992 /* Icons.xcassets */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		CDF73946258F9D57007013A0 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				CDF73947258F9D6B007013A0 /* ProductJSONDataStore.swift */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -933,6 +944,7 @@
 				2A5C27C02570302300335992 /* SceneDelegate.swift in Sources */,
 				2A5C27C22570302300335992 /* ConverterView.swift in Sources */,
 				2A2B84E625753BFF002627E5 /* AppMeasureFormatter.swift in Sources */,
+				CDF73948258F9D6B007013A0 /* ProductJSONDataStore.swift in Sources */,
 				2A6692A72574920300D51764 /* MeasureListViewModel.swift in Sources */,
 				2A6692A0257490C700D51764 /* MeasureListView.swift in Sources */,
 				2A66925825746B8600D51764 /* PaddingTextField.swift in Sources */,
