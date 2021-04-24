@@ -1,8 +1,6 @@
 # Cook Converter
 
-[![](/CookConverter/Resources/Assets/Icons/Icons.xcassets/AppIcon.appiconset/AppIcon-1024@1x.png?raw=true)](https://apps.apple.com/us/app/culiversor/id1543824498)
-
-<img src = "CookConverter/Resources/Assets/Icons/Icons.xcassets/AppIcon.appiconset/AppIcon-1024@1x.png">
+[![](/CookConverter/Resources/Assets/Icons/Icons.xcassets/AppIcon.appiconset/AppIcon-1024@1x.png?raw=true =250x250)](https://apps.apple.com/us/app/culiversor/id1543824498)
 
 **Cook Coverver** is an iOS/iPadOS app that converts some units of measurement for you in order to make your life in the kitchen a little easier :)
 
